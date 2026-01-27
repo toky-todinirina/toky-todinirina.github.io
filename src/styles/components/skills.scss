@@ -1,0 +1,67 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixins" as mix;
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center !important;
+}
+
+
+/* Skill card */
+.skill-card {
+    border-radius: 14px;
+    padding: 1.6rem 1.4rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px vars.$shadow-color;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px)!important;
+        box-shadow: 0 8px 20px vars.$shadow-color;
+    }
+
+    &:hover .skill__icon {
+        color: vars.$accent-color;
+        transform: scale(1.1);
+    }
+
+    .skill__icon {
+        color: vars.$primary-color;
+        font-size: 2.8rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        @media (max-width: 768px) {
+            font-size: 2.2rem;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 2rem;
+        }
+
+    }
+
+    &__name {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: vars.$text-primary;
+        margin-bottom: 0.4rem;
+    }
+
+    &__level {
+        font-size: 0.85rem;
+        color: vars.$text-secondary;
+    }
+}
+
+/* Mobile spacing */
+@media (max-width: 480px) {
+    .skill-card {
+        padding: 1.3rem;
+    }
+}

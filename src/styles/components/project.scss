@@ -1,0 +1,135 @@
+@use "../utils/variables" as vars;
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  justify-content: center !important;
+}
+
+.project__card {
+  background-color: vars.$surface-color;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px vars.$shadow-color;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.project__badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.project__category {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background-color: rgba(vars.$accent-color, 0.2);
+  color: vars.$accent-color;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.project__date {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background-color: rgba(vars.$primary-color, 0.1);
+  color: vars.$primary-color;
+  font-weight: 600;
+}
+
+.project__image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .project__card:hover & img {
+    transform: scale(1.08);
+  }
+}
+
+.project__content {
+  padding: 1.4rem;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: vars.$primary-color;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: vars.$text-secondary;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  li {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    background-color: rgba(vars.$accent-color, 0.12);
+    color: vars.$accent-color;
+    font-weight: 600;
+  }
+}
+
+.project__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project__link {
+  font-weight: 600;
+  color: vars.$primary-variant;
+  text-decoration: none;
+  position: relative;
+  width: fit-content;
+  padding: 0.5rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: vars.$primary-variant;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

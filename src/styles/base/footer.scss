@@ -1,0 +1,130 @@
+@use "../utils/variables" as vars;
+
+.footer {
+    background: rgba(vars.$primary-color, 1);
+    color: vars.$surface-color;
+    border-top: 1px solid vars.$shadow-color;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-top: 3rem;
+    margin-top: 5rem;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__brand {
+        h3 {
+            font-size: 1.2rem;
+            color: vars.$surface-color;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: vars.$surface-color;
+        }
+    }
+
+    .footer__nav-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+
+        a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            color: vars.$text-on-primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+            svg {
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                background: vars.$accent-color;
+                transform: translateY(-4px);
+            }
+
+            &:hover::after {
+                content: attr(title);
+                position: absolute;
+                bottom: -32px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 0.7rem;
+                background: vars.$text-primary;
+                padding: 4px 8px;
+                border-radius: 4px;
+                color: vars.$info-color;
+                white-space: nowrap;
+            }
+        }
+    }
+
+
+    &__social {
+
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: vars.$background-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: vars.$primary-color;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: vars.$primary-variant;
+                color: vars.$text-on-primary;
+                transform: translateY(-3px);
+            }
+
+            svg {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: 2rem;
+        padding: 1rem 0;
+        background: vars.$primary-variant;
+        text-align: center;
+        font-size: 0.8rem;
+        color: vars.$surface-color;
+    }
+
+    .footer__scrolltop{
+        padding: 1.1em;
+        border: none;
+        cursor: pointer;
+        color: vars.$surface-color;
+        background-color:rgba(vars.$accent-color, .8);
+        float: right;
+        margin-bottom: 3rem;
+        border-radius: 5px;
+        transition: all ease-out .1s linear;
+        &:hover{
+            background-color:rgba(vars.$accent-color, 1);
+        }
+    }
+}
