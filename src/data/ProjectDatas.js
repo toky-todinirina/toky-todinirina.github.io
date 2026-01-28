@@ -1,5 +1,6 @@
 import Project from "../assets/images/avatar.png";
 import Portfolio from "../assets/images/portfolio.png";
+import Portfolio2 from "../assets/images/dashboard.png"
 export const projects = [
   {
     id: 1,
@@ -27,11 +28,11 @@ export const projects = [
     id: 3,
     title: "Dashboard Admin",
     description: "Dashboard analytique avec graphiques et gestion utilisateurs.",
-    image: Project,
+    image: Portfolio2,
     tags: ["React", "Charts", "Admin"],
-    link: "https://toky-todinirina.vercel.app",
-    date: "2024",
-    category: "Professionnel",
-    github: "https://github.com/toky-todinirina/toky-todinirina.github.io"
+    link: "https://e-dashboard-qvdp.vercel.app",
+    date: "2026",
+    category: "Personnel",
+    github: "https://github.com/toky-todinirina/e-dashboard"
   }
 ];

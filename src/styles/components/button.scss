@@ -1,26 +1,29 @@
 @use "../utils/variables" as vars;
 
 .btn {
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  
-    &--primary {
-      background-color: vars.$primary-variant;
-      color: vars.$text-on-primary;
-    }
-  
-    &--secondary{
-      background-color:vars.$secondary-variant;
-      color: vars.$text-on-primary;
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
 
-    }
-    &--outline {
-      border: 1px solid vars.$primary-color;
-      color: vars.$primary-color;
-      background: transparent;
-    }
+  &--primary {
+    background-color: vars.$primary-variant;
+    color: vars.$text-on-primary;
   }
-  
+
+  &--secondary {
+    background-color: vars.$secondary-variant;
+    color: vars.$text-on-primary;
+
+  }
+
+  &--outline {
+    border: 1px solid vars.$primary-color;
+    color: vars.$primary-color;
+    background: transparent;
+  }
+}
