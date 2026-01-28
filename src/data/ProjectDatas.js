@@ -29,7 +29,7 @@ export const projects = [
     title: "Dashboard Admin",
     description: "Dashboard analytique avec graphiques et gestion utilisateurs.",
     image: Portfolio2,
-    tags: ["React", "Charts", "Admin"],
+    tags: ["React", "Charts", "TypeScript"],
     link: "https://e-dashboard-qvdp.vercel.app",
     date: "2026",
     category: "Personnel",
