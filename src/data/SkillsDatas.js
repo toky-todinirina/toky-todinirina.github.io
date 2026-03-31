@@ -11,31 +11,37 @@ export const skillsDatas = [
   {
     name: "React",
     icon: FaReact,
-    level: "Avancé"
+    level: "Avancé",
+    percentage: 88
   },
   {
     name: "JavaScript",
     icon: FaJs,
-    level: "Avancé"
+    level: "Avancé",
+    percentage: 90
   },
   {
     name: "HTML5",
     icon: FaHtml5,
-    level: "Expert"
+    level: "Expert",
+    percentage: 98
   },
   {
     name: "SCSS",
     icon: SiSass,
-    level: "Avancé"
+    level: "Avancé",
+    percentage: 84
   },
   {
     name: "Vite",
     icon: SiVite,
-    level: "Intermédiaire"
+    level: "Intermédiaire",
+    percentage: 72
   },
   {
     name: "Git",
     icon: FaGitAlt,
-    level: "Intermédiaire"
+    level: "Intermédiaire",
+    percentage: 68
   }
 ];

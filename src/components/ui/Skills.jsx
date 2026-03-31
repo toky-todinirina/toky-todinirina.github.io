@@ -47,21 +47,37 @@ const Skills = () => {
       >
         {skillsDatas.map((skill, index) => {
           const Icon = skill.icon;
-          return(
-          <motion.div
-            key={index}
-            className="skill-card"
-            variants={itemVariants}
-            transition={{
-              delay: index * 0.3
-            }}
-          >
-            <div className="skill-card__icon">
-              <Icon className="skill__icon"/>
-            </div>
-            <span className="skill-card__name">{skill.name}</span>
-            <span className="skill-card__level">{skill.level}</span>
-          </motion.div>
+          const progress = skill.percentage || 0;
+
+          return (
+            <motion.div
+              key={index}
+              className="skill-bar"
+              variants={itemVariants}
+              transition={{
+                delay: index * 0.12,
+              }}
+            >
+              <div className="skill-bar__head">
+                <div className="skill-bar__meta">
+                  <Icon className="skill-bar__icon" />
+                  <span className="skill-bar__name">{skill.name}</span>
+                </div>
+                <span className="skill-bar__level">{skill.level}</span>
+              </div>
+
+              <div className="skill-bar__track">
+                <motion.div
+                  className="skill-bar__fill"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: `${progress}%` }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                />
+              </div>
+
+              <span className="skill-bar__percentage">{progress}%</span>
+            </motion.div>
           );
         })}
       </motion.div>
