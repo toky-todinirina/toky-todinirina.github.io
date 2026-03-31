@@ -1,6 +1,7 @@
 import Project from "../assets/images/avatar.png";
 import Portfolio from "../assets/images/portfolio.png";
 import Portfolio2 from "../assets/images/dashboard.png"
+import Portfolio3 from "../assets/images/e-commerce.png";
 export const projects = [
   {
     id: 1,
@@ -17,12 +18,12 @@ export const projects = [
     id: 2,
     title: "E-commerce App",
     description: "Application e-commerce avec panier, filtres et UX optimisée.",
-    image: Project,
+    image: Portfolio3,
     tags: ["React", "API", "Stripe"],
-    link: "https://toky-todinirina.vercel.app",
+    link: "https://e-commerce-main-jade.vercel.app/",
     date: "2025",
     category: "Professionnel",
-    github: "https://github.com/toky-todinirina/toky-todinirina.github.io"
+    github: "https://github.com/toky-todinirina/e-commerce-main.git"
   },
   {
     id: 3,
