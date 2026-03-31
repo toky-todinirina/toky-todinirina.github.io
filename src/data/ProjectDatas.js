@@ -22,7 +22,7 @@ export const projects = [
     tags: ["React", "API", "Stripe"],
     link: "https://e-commerce-main-jade.vercel.app/",
     date: "2025",
-    category: "Professionnel",
+    category: "Personnel",
     github: "https://github.com/toky-todinirina/e-commerce-main.git"
   },
   {
