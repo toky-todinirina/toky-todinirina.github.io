@@ -21,7 +21,7 @@ export const projects = [
     image: Portfolio3,
     tags: ["React", "API", "Stripe"],
     link: "https://e-commerce-main-jade.vercel.app/",
-    date: "2025",
+    date: "2026",
     category: "Personnel",
     github: "https://github.com/toky-todinirina/e-commerce-main.git"
   },
