@@ -1,8 +1,9 @@
 import {
   FaReact,
-  FaJs,
-  FaHtml5,
-  FaGitAlt
+  FaNodeJs,
+  FaGitAlt,
+  FaFigma,
+  FaPaintBrush
 } from "react-icons/fa";
 
 import { SiVite, SiSass } from "react-icons/si";
@@ -14,15 +15,9 @@ export const skillsDatas = [
     level: "Avancé",
     percentage: 88
   },
-  {
-    name: "JavaScript",
-    icon: FaJs,
-    level: "Avancé",
-    percentage: 90
-  },
-  {
-    name: "HTML5",
-    icon: FaHtml5,
+    {
+    name: "Adobe Illustrator",
+    icon: FaPaintBrush,
     level: "Expert",
     percentage: 98
   },
@@ -32,16 +27,22 @@ export const skillsDatas = [
     level: "Avancé",
     percentage: 84
   },
+   {
+    name: "Adobe Express",
+    icon: FaGitAlt,
+    level: "Intermédiaire",
+    percentage: 68
+  },
   {
-    name: "Vite",
-    icon: SiVite,
+    name: "Node Js",
+    icon: FaNodeJs,
     level: "Intermédiaire",
     percentage: 72
   },
   {
-    name: "Git",
-    icon: FaGitAlt,
+    name: "Figma",
+    icon: FaFigma,
     level: "Intermédiaire",
-    percentage: 68
+    percentage: 60
   }
 ];

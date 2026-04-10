@@ -1,5 +1,4 @@
 import './styles/main.scss';
-import HighTechBackground from './components/layout/HighTechBackground';
 import Header from './components/layout/Header';
 import About from './components/ui/About';
 import Skills from './components/ui/Skills';
@@ -11,7 +10,6 @@ import Footer from './components/layout/Footer';
 function App() {
   return (
     <>
-      <HighTechBackground />
       <div className="app-content">
         <Header />
         <About />

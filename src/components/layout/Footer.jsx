@@ -22,13 +22,9 @@ const Footer = () => {
         viewport={{ once: true }}
       >
         <div className="footer__container">
-
-          {/* BRAND */}
           <div className="footer__brand">
             <p>Développeur Front-End React</p>
           </div>
-
-          {/* NAVIGATION ICONES */}
           <div className="footer__nav-icons">
             <a href="#about" aria-label="À propos" title="À propos">
               <FiUser />

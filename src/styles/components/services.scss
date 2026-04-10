@@ -13,7 +13,7 @@
   padding: 2rem 1.5rem;
   border-radius: 18px;
   text-align: center;
-  background-color: vars.$surface-color;
+  background-color: vars.$primary-variant;
   box-shadow: 0 8px 24px vars.$shadow-color;
   display: flex;
   flex-direction: column;
@@ -26,16 +26,18 @@
     color: vars.$primary-color;
     font-size: 3rem;
   }
-
+.services__name {
+      color: vars.$text-on-primary;
+    }
   .services__desc {
     font-size: 0.85rem;
-    color: vars.$text-secondary;
+    color: vars.$text-on-primary;
   }
 
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 32px vars.$shadow-color;
-    background-color: vars.$primary-variant;
+    background-color: vars.$primary-color;
 
     .services__icon {
       color: vars.$accent-color;

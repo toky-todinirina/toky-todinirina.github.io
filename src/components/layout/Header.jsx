@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "../../styles/base/header.scss";
 
-const navLinks = ["About", "Skills", "Services","Projects", "Contact"];
+const navLinks = ["About", "Skills", "Services", "Projects", "Contact"];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,18 +10,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        <div className="header__logo">
-          <a href="#about" className="brand">Toky</a>
-        </div>
-        <nav className="header__nav">
-          {navLinks.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`}>
-              {link}
-            </a>
-          ))}
-        </nav>
-
-        {/* Mobile Hamburger */}
+        {/* Remplacement du logo par le bouton hamburger */}
         <div
           className={`header__burger ${isOpen ? "open" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
@@ -30,9 +19,18 @@ export default function Header() {
           <span />
           <span />
         </div>
+
+        {/* Navigation desktop */}
+        <nav className="header__nav">
+          {navLinks.map((link) => (
+            <a key={link} href={`#${link.toLowerCase()}`}>
+              {link}
+            </a>
+          ))}
+        </nav>
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* Menu mobile animé */}
       {isOpen && (
         <motion.nav
           className="header__nav-mobile"

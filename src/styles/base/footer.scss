@@ -21,10 +21,6 @@
     }
 
     &__brand {
-        h3 {
-            font-size: 1.2rem;
-            color: vars.$surface-color;
-        }
 
         p {
             font-size: 0.9rem;
@@ -42,7 +38,7 @@
             height: 44px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.15);
-            color: vars.$text-on-primary;
+            color: vars.$primary-variant;
             display: flex;
             align-items: center;
             justify-content: center;

@@ -8,7 +8,8 @@
 }
 
 .project__card {
-  background-color: vars.$surface-color;
+  background-color: vars.$primary-variant;
+  border: 7px solid vars.$primary-variant;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 6px 16px vars.$shadow-color;
