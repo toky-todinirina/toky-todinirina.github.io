@@ -65,7 +65,6 @@ const Skills = () => {
                 </div>
                 <span className="skill-bar__level">{skill.level}</span>
               </div>
-
               <div className="skill-bar__track">
                 <motion.div
                   className="skill-bar__fill"
@@ -75,7 +74,6 @@ const Skills = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 />
               </div>
-
               <span className="skill-bar__percentage">{progress}%</span>
             </motion.div>
           );

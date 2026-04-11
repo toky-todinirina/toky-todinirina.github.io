@@ -87,36 +87,36 @@
 }
 
 .project__tags {
+  width: 80%;
+  // margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
-
+  list-style: none;
   li {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
-    border-radius: 999px;
-    background-color: rgba(vars.$accent-color, 0.12);
-    color: vars.$accent-color;
+    border-radius: 9px;
+    background-color: rgba(vars.$accent-color, 0.5);
+    color: vars.$text-on-primary;
     font-weight: 600;
   }
 }
-
 .project__actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .project__link {
   font-weight: 600;
-  color: vars.$primary-variant;
+  font-size: 14px;
+  color: vars.$text-secondary;
   text-decoration: none;
   position: relative;
   width: fit-content;
   padding: 0.5rem 0;
-
   &::after {
     content: "";
     position: absolute;
@@ -124,7 +124,7 @@
     bottom: -4px;
     width: 100%;
     height: 2px;
-    background-color: vars.$primary-variant;
+    background-color: vars.$primary-color;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;

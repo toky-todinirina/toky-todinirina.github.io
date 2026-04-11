@@ -1,15 +1,24 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A portfolio react project ",
+  "homepage": "https://github.com/toky-todinirina/toky-todinirina.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/toky-todinirina/toky-todinirina.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toky-todinirina/toky-todinirina.github.io.git"
+  },
+  "license": "ISC",
+  "author": "Toky Todinirina",
+  "type": "commonjs",
   "main": "main.jsx",
   "scripts": {
     "test": "test",
     "dev": "vite",
     "build": "vite build"
   },
-  "author": "Toky Todinirina",
-  "license": "ISC",
   "dependencies": {
     "axios": "^1.13.2",
     "clsx": "^2.1.1",

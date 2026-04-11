@@ -20,34 +20,34 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
-
+  // transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  transition: all .4s linear;
   .services__icon {
     color: vars.$primary-color;
     font-size: 3rem;
+    transition: all .4s linear;
   }
-.services__name {
+  .services__name {
       color: vars.$text-on-primary;
+       transition: all .4s linear;
     }
   .services__desc {
     font-size: 0.85rem;
     color: vars.$text-on-primary;
+     transition: all .4s linear;
   }
 
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 32px vars.$shadow-color;
-    background-color: vars.$primary-color;
-
+    scale: 1.1;
     .services__icon {
       color: vars.$accent-color;
       transform: scale(1.2);
     }
-
     .services__name {
       color: vars.$text-on-primary;
     }
-
     .services__desc {
       color: vars.$text-on-primary; // description également
     }
