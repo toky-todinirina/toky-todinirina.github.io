@@ -3,6 +3,7 @@ import Button from "../common/Button";
 import "../../styles/components/contact.scss";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
+
 const Contact = () => {
   return (
     <Section
@@ -10,7 +11,7 @@ const Contact = () => {
       title="Contact"
       subtitle={
         <>
-            Discutons de votre <span class='highlight'>projet</span>
+          Discutons de votre <span class="highlight">projet</span>
         </>
       }
       align="center"
@@ -20,8 +21,8 @@ const Contact = () => {
         <div className="contact__card contact__info">
           <h3>Mes coordonnées</h3>
           <p>
-            N’hésitez pas à me contacter pour discuter d’un projet,
-            d’une collaboration ou simplement échanger.
+            N’hésitez pas à me contacter pour discuter d’un projet, d’une
+            collaboration ou simplement échanger.
           </p>
 
           <ul className="contact__list">

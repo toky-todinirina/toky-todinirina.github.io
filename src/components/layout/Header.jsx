@@ -2,7 +2,28 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "../../styles/base/header.scss";
 
-const navLinks = ["About", "Skills", "Services", "Projects", "Contact"];
+const navLinks = [
+  {
+    name: "A propos",
+    path: "about",
+  },
+  {
+    name: "Connaissances",
+    path: "skills",
+  },
+  {
+    name: "Services",
+    path: "services",
+  },
+  {
+    name: "Projets",
+    path: "projects",
+  },
+  {
+    name: "Contact",
+    path: "contact",
+  },
+];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +44,8 @@ export default function Header() {
         {/* Navigation desktop */}
         <nav className="header__nav">
           {navLinks.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`}>
-              {link}
+            <a key={link.name} href={`#${link.path.toLowerCase()}`}>
+              {link.name}
             </a>
           ))}
         </nav>
