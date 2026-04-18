@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Section from "../common/Section";
 import "../../styles/components/about.scss";
-import Avatar from "../../assets/images/ME.png";
+import Avatar from "../../assets/images/avatar.png";
 import Highlights from "../common/Hightlights";
 
 const About = () => {
