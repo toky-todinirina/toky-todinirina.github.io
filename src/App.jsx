@@ -15,12 +15,12 @@ function App() {
       <div className="app-content">
         <Header />
         <About />
-        <Skills />
-        <Experience />
-        <Terminal />
         <Services />
         <Projects />
+        <Experience />
+        <Skills />
         <Contact />
+        <Terminal />
         <Footer />
       </div>
     </>
