@@ -43,9 +43,9 @@ export const servicesData = [
     description: "Saisie, vérification et organisation de vos données avec précision.",
     icon: FaKeyboard,
     pricing: [
-      "Saisie simple : 30 000 Ar/h",
-      "Avec vérification : 40 000 Ar/h",
-      "Nettoyage / structuration : 50 000 Ar/h et +",
+      "Saisie simple : tarif au mot",
+      "Avec vérification : tarif au mot",
+      "Nettoyage / structuration : devis au mot selon la complexité",
     ],
   },
 ];
