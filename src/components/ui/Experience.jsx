@@ -15,7 +15,7 @@ const getReferenceLink = (reference) => {
   if (reference.email) {
     return {
       href: `mailto:${reference.email}`,
-      label: reference.name ? `Contacter ${reference.name}` : "Contacter une référence",
+      label: "Contacter une référence",
       icon: FiMail,
     };
   }
@@ -23,7 +23,7 @@ const getReferenceLink = (reference) => {
   if (reference.phone) {
     return {
       href: `tel:${reference.phone}`,
-      label: reference.name ? `Contacter ${reference.name}` : "Contacter une référence",
+      label: "Contacter une référence",
       icon: FiPhone,
     };
   }
