@@ -80,9 +80,9 @@
   border-radius: 50%;
 }
 
-.terminal-control--red { background: vars.$error-color; }
-.terminal-control--yellow { background: vars.$warning-color; }
-.terminal-control--green { background: vars.$success-color; }
+.terminal-control--red { background: vars.$secondary-variant; }
+.terminal-control--yellow { background: vars.$secondary-color; }
+.terminal-control--green { background: vars.$primary-color; }
 
 .terminal-title,
 .terminal-hint {
