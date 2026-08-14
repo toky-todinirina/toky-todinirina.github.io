@@ -6,10 +6,10 @@ export const experiences = [
     type: "Prestation",
     period: "Avril 2026 – Juin 2026",
     responsibilities: [
-      "Réalisation d'enquêtes et collecte de données qualitatives et quantitatives auprès des jeunes en milieu scolaire (collèges) dans la région Haute Matsiatra.",
-      "Contribution active aux initiatives visant à assurer une éducation de qualité et à garantir la sécurité ainsi que la santé de chacun de ces jeunes.",
+      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
     ],
     skills: [
+      "Méthodes de recherche qualitatives",
       "Méthodes de recherche quantitatives",
       "Communication interpersonnelle",
       "Communication standardisée",
@@ -22,9 +22,7 @@ export const experiences = [
     type: "Prestation",
     period: "Janvier 2026 – Mars 2026",
     responsibilities: [
-      "Prise en charge de la transcription rigoureuse de fichiers audio vers la plateforme Google Docs.",
-      "Imputation des données sur papier vers Google Sheets.",
-      "Assurance du respect intégral du ton, des expressions idiomatiques et de la structure grammaticale des phrases originales.",
+      "Codage, saisie et imputation de données d'enquêtes terrain sur papier vers Google Sheets. Transcription intégrale d'enregistrements audio (études qualitatives et relances/probing) sur Google Docs. Excellente maîtrise de la frappe rapide (60 mots/min) avec un taux de précision de 97 % et un contrôle qualité rigoureux.",
     ],
     skills: [
       "Saisie de données en ligne",
@@ -41,10 +39,10 @@ export const experiences = [
     type: "Prestation",
     period: "Septembre 2025 – Octobre 2025",
     responsibilities: [
-      "Réalisation d'enquêtes et collecte de données qualitatives et quantitatives auprès des jeunes en milieu scolaire (collèges) dans la région Haute Matsiatra.",
-      "Contribution active aux initiatives visant à assurer une éducation de qualité et à garantir la sécurité ainsi que la santé de chacun de ces jeunes.",
+      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
     ],
     skills: [
+      "Méthodes de recherche qualitatives",
       "Méthodes de recherche quantitatives",
       "Communication interpersonnelle",
       "Communication standardisée",
@@ -57,8 +55,7 @@ export const experiences = [
     type: "Prestation",
     period: "Juillet 2025 – Août 2025",
     responsibilities: [
-      "Exécution de la saisie textuelle et transcription minutieuse de fichiers audio sur Google Docs.",
-      "Restitution fidèle de la structure, des expressions et des nuances de ton des fichiers sources.",
+      "Codage, saisie et imputation de données d'enquêtes terrain sur papier vers Google Sheets. Transcription intégrale d'enregistrements audio (études qualitatives et relances/probing) sur Google Docs. Excellente maîtrise de la frappe rapide (60 mots/min) avec un taux de précision de 97 % et un contrôle qualité rigoureux.",
     ],
     skills: ["Saisie de données", "Rigueur éditoriale"],
   },
@@ -69,13 +66,11 @@ export const experiences = [
     type: "Prestation",
     period: "Avril 2025 – Juin 2025",
     responsibilities: [
-      "Conduite d'enquêtes pour le recueil de données quantitatives et qualitatives ciblant les jeunes collégiens de la région Haute Matsiatra.",
-      "Appui aux programmes de sensibilisation et d'évaluation portant sur la qualité de l'éducation, la sécurité, la santé psychologique, l'éducation sexuelle, le développement de relations saines et l'initiation au counseling.",
+      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
     ],
     skills: [
       "Méthodes de recherche qualitatives",
       "Méthodes de recherche quantitatives",
-      "Français",
       "Communication adaptative",
       "Communication interpersonnelle",
       "Communication standardisée",
@@ -88,13 +83,11 @@ export const experiences = [
     type: "Prestation",
     period: "Septembre 2024 – Novembre 2024",
     responsibilities: [
-      "Déploiement de méthodes de recherche quantitatives et qualitatives pour collecter des données auprès d'un public scolaire (collèges).",
-      "Évaluation des facteurs liés à la sécurité, la santé et l'accès à une éducation de qualité pour les jeunes bénéficiaires.",
+      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
     ],
     skills: [
       "Méthodes de recherche qualitatives",
       "Méthodes de recherche quantitatives",
-      "Français",
       "Communication interpersonnelle",
       "Communication standardisée",
     ],
@@ -106,14 +99,11 @@ export const experiences = [
     type: "Prestation",
     period: "Mai 2024 – Juillet 2024 (3 mois)",
     responsibilities: [
-      "Coordination, encadrement et organisation des tâches quotidiennes d'une équipe d'enquêteurs sur le terrain.",
-      "Pilotage opérationnel des enquêtes de terrain lors d'une intervention de ciblage des ménages éligibles.",
-      "Déploiement du projet Transfert Monétaire Non Conditionnel Tsimbina mené par l'association Young Progress.",
+      "Encadrement de 5 enquêteurs pour le projet de Transfert Monétaire Non Conditionnel  de l'ONG FID Madagascar qui était exécuté par l'ONG Young Progress. Supervision du ciblage et des deux phases de validation communautaire de la vulnérabilité des ménages. Animation des formations MACC (Mesures d'Accompagnement) sur la gestion financière et contrôle du processus lors des paiements publics.",
     ],
     skills: [
       "Management d'équipe terrain",
       "Supervision socio-économique",
-      "Français",
     ],
   },
   {
