@@ -106,14 +106,14 @@
         background: vars.$primary-variant;
         text-align: center;
         font-size: 0.8rem;
-        color: vars.$surface-color;
+        color: vars.$text-secondary;
     }
 
     .footer__scrolltop{
         padding: 1.1em;
         border: none;
         cursor: pointer;
-        color: vars.$surface-color;
+        color: vars.$text-on-primary;
         background-color:rgba(vars.$accent-color, .8);
         float: right;
         margin-bottom: 3rem;
