@@ -70,12 +70,12 @@ function Terminal() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "AI request failed");
+        throw new Error(data.error || "Terminal command failed");
       }
 
       addOutput(data.answer.split("\n"));
     } catch (error) {
-      addOutput(["AI assistant error:", error.message]);
+      addOutput(["Terminal assistant error:", error.message]);
     } finally {
       setIsThinking(false);
     }
@@ -110,7 +110,7 @@ function Terminal() {
         return;
       }
 
-      addOutput(["AI is thinking..."]);
+      addOutput(["Terminal is thinking..."]);
       askAI(question);
       return;
     }
