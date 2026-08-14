@@ -29,7 +29,7 @@ const Footer = () => {
             <a href="#about" aria-label="À propos" title="À propos">
               <FiUser />
             </a>
-            <a href="#skills" aria-label="Compétences" title="Compétences">
+            <a href="#competences" aria-label="Compétences" title="Compétences">
               <FiLayers />
             </a>
             <a href="#projects" aria-label="Projets" title="Projets">

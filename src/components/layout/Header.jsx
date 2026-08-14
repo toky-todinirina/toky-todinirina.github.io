@@ -8,8 +8,8 @@ const navLinks = [
     path: "about",
   },
   {
-    name: "Connaissances",
-    path: "skills",
+    name: "Compétences",
+    path: "competences",
   },
   {
     name: "Services",

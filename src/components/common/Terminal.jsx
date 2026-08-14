@@ -156,7 +156,7 @@ function Terminal() {
         ]);
 
         setTimeout(() => {
-          scrollToSection("skills");
+          scrollToSection("competences");
         }, 150);
 
         break;

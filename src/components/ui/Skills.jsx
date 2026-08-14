@@ -32,7 +32,7 @@ const Skills = () => {
 
   return (
     <Section
-      id="skills"
+      id="competences"
       title="Compétences"
       subtitle={
         <><Highlights>Technologies</Highlights> et outils que j’utilise régulièrement</>
