@@ -109,7 +109,7 @@ export const experiences = [
     position: "Superviseur Socio-Organisateur",
     organization: "ONG Young Progress",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+    reference: { name: "Jenny RAELISON", role: "Chef de Mission", email: "jennyraelison@youngprogress.mg", phone: " 034 39 676 25" },
     type: "Prestation",
     period: "Mai 2024 – Juillet 2024",
     responsibilities: [
