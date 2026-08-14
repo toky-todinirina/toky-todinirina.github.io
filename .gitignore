@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+IA_API_KEY
 
 # Editor directories and files
 .vscode/*
