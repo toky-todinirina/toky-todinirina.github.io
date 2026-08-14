@@ -31,15 +31,18 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        {/* Remplacement du logo par le bouton hamburger */}
-        <div
+        <button
+          type="button"
           className={`header__burger ${isOpen ? "open" : ""}`}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label={isOpen ? "Fermer le menu de navigation" : "Ouvrir le menu de navigation"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
-          <span />
-          <span />
-          <span />
-        </div>
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
 
         {/* Navigation desktop */}
         <nav className="header__nav">
@@ -54,6 +57,7 @@ export default function Header() {
       {/* Menu mobile animé */}
       {isOpen && (
         <motion.nav
+          id="mobile-navigation"
           className="header__nav-mobile"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,11 +65,11 @@ export default function Header() {
         >
           {navLinks.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.name}
+              href={`#${link.path}`}
               onClick={() => setIsOpen(false)}
             >
-              {link}
+              {link.name}
             </a>
           ))}
         </motion.nav>
