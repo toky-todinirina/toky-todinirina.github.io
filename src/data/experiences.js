@@ -126,8 +126,8 @@ export const experiences = [
     organization: "Équipe REVU de l'Université de Fianarantsoa",
     organizationUrl: "",
     reference: { name: "", role: "", email: "", phone: "" },
-    type: "Freelance",
-    period: "Février 2024 – Avril 2024 (2 mois)",
+    type: "Volontariat",
+    period: "Février 2024",
     responsibilities: [
       "Rédaction et publication d'un article thématique majeur intitulé \"Digitalisation et Vie Estudiantine Harmonieuse\" pour la revue universitaire.",
       "Valorisation et démonstration de l'apport des outils numériques dans le renforcement de la cohésion sociale et la facilitation du quotidien des étudiants.",
