@@ -45,7 +45,7 @@ export const servicesData = [
     pricing: [
       "Saisie simple : 20 000 Ar/h",
       "Avec vérification : 30 000 Ar/h",
-      "Nettoyage / structuration : 350 00 Ar/h et +",
+      "Nettoyage / structuration : 35 000 Ar/h et +",
     ],
   },
 ];
