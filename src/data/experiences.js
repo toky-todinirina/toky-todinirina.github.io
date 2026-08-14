@@ -4,7 +4,7 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+    reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Avril 2026 – Juin 2026",
     responsibilities: [
@@ -22,7 +22,7 @@ export const experiences = [
     position: "Opérateur de saisie",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+    reference: { name: "Mihaja RAONIVOLOLONA", role: "Responsable Intégration des Systèmes de Suivi et Évaluation", email: "mihaja@projetjeuneleader.org", phone: " 34 79 791 98" },
     type: "Prestation",
     period: "Janvier 2026 – Mars 2026",
     responsibilities: [
@@ -41,7 +41,7 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+      reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Septembre 2025 – Octobre 2025",
     responsibilities: [
@@ -59,7 +59,7 @@ export const experiences = [
     position: "Opérateur de saisie",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+        reference: { name: "Mihaja RAONIVOLOLONA", role: "Responsable Intégration des Systèmes de Suivi et Évaluation", email: "mihaja@projetjeuneleader.org", phone: " 34 79 791 98" },
     type: "Prestation",
     period: "Juillet 2025 – Août 2025",
     responsibilities: [
@@ -72,7 +72,7 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+      reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Avril 2025 – Juin 2025",
     responsibilities: [
@@ -91,7 +91,7 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+      reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Septembre 2024 – Novembre 2024",
     responsibilities: [
