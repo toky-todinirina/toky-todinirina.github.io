@@ -3,6 +3,8 @@ export const experiences = [
     id: "assistant-recherche-2026-04",
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Avril 2026 – Juin 2026",
     responsibilities: [
@@ -19,6 +21,8 @@ export const experiences = [
     id: "operateur-saisie-2026-01",
     position: "Opérateur de saisie",
     organization: "Projet Jeune Leader",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Janvier 2026 – Mars 2026",
     responsibilities: [
@@ -36,6 +40,8 @@ export const experiences = [
     id: "assistant-recherche-2025-09",
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Septembre 2025 – Octobre 2025",
     responsibilities: [
@@ -52,6 +58,8 @@ export const experiences = [
     id: "operateur-saisie-2025-07",
     position: "Opérateur de saisie",
     organization: "Projet Jeune Leader",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Juillet 2025 – Août 2025",
     responsibilities: [
@@ -63,6 +71,8 @@ export const experiences = [
     id: "assistant-recherche-2025-04",
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Avril 2025 – Juin 2025",
     responsibilities: [
@@ -80,6 +90,8 @@ export const experiences = [
     id: "assistant-recherche-2024-09",
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Septembre 2024 – Novembre 2024",
     responsibilities: [
@@ -96,6 +108,8 @@ export const experiences = [
     id: "superviseur-socio-organisateur-2024-05",
     position: "Superviseur Socio-Organisateur",
     organization: "ONG Young Progress",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Mai 2024 – Juillet 2024 (3 mois)",
     responsibilities: [
@@ -110,6 +124,8 @@ export const experiences = [
     id: "redacteur-revu-2024-02",
     position: "Rédacteur REVU",
     organization: "Équipe REVU de l'Université de Fianarantsoa",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Freelance",
     period: "Février 2024 – Avril 2024 (2 mois)",
     responsibilities: [
@@ -122,6 +138,8 @@ export const experiences = [
     id: "chef-chantier-2023-05",
     position: "Chef de Chantier",
     organization: "Agence d'Exécution Nasandratra",
+    organizationUrl: "",
+    reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
     period: "Mai 2023 – Juillet 2023 (3 mois)",
     responsibilities: [

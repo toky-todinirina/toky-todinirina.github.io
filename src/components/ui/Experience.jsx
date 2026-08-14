@@ -1,8 +1,35 @@
 import { motion } from "framer-motion";
-import { FiBriefcase, FiCalendar, FiMapPin } from "react-icons/fi";
+import {
+  FiBriefcase,
+  FiCalendar,
+  FiExternalLink,
+  FiMail,
+  FiMapPin,
+  FiPhone,
+} from "react-icons/fi";
 import Section from "../common/Section";
 import { experiences } from "../../data/experiences";
 import "../../styles/components/experience.scss";
+
+const getReferenceLink = (reference) => {
+  if (reference.email) {
+    return {
+      href: `mailto:${reference.email}`,
+      label: reference.name ? `Contacter ${reference.name}` : "Contacter une référence",
+      icon: FiMail,
+    };
+  }
+
+  if (reference.phone) {
+    return {
+      href: `tel:${reference.phone}`,
+      label: reference.name ? `Contacter ${reference.name}` : "Contacter une référence",
+      icon: FiPhone,
+    };
+  }
+
+  return null;
+};
 
 const Experience = () => (
   <Section
@@ -20,6 +47,12 @@ const Experience = () => (
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
         >
+          {(() => {
+            const referenceLink = getReferenceLink(experience.reference);
+            const ReferenceIcon = referenceLink?.icon || FiMail;
+
+            return (
+              <>
           <span className="experience-card__marker" aria-hidden="true" />
 
           <header className="experience-card__header">
@@ -27,7 +60,18 @@ const Experience = () => (
               <h3>{experience.position}</h3>
               <p className="experience-card__organization">
                 <FiMapPin aria-hidden="true" />
-                {experience.organization}
+                {experience.organizationUrl ? (
+                  <a
+                    href={experience.organizationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {experience.organization}
+                    <FiExternalLink aria-hidden="true" />
+                  </a>
+                ) : (
+                  experience.organization
+                )}
               </p>
             </div>
 
@@ -56,6 +100,27 @@ const Experience = () => (
               <li key={skill}>{skill}</li>
             ))}
           </ul>
+          <div className="experience-card__actions">
+            {referenceLink ? (
+              <a className="experience-card__reference" href={referenceLink.href}>
+                <ReferenceIcon aria-hidden="true" />
+                {referenceLink.label}
+              </a>
+            ) : (
+              <button
+                className="experience-card__reference"
+                type="button"
+                disabled
+                title="Coordonnées de référence à renseigner"
+              >
+                <ReferenceIcon aria-hidden="true" />
+                Référence à venir
+              </button>
+            )}
+          </div>
+              </>
+            );
+          })()}
         </motion.article>
       ))}
     </div>

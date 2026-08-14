@@ -70,6 +70,19 @@
     svg {
       color: vars.$secondary-color;
     }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        color: vars.$primary-color;
+      }
+    }
   }
 
   &__type {
@@ -131,6 +144,39 @@
       color: vars.$secondary-color;
       font-size: 0.75rem;
       line-height: 1.2;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    margin-top: 1.1rem;
+  }
+
+  &__reference {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid rgba(vars.$primary-color, 0.45);
+    border-radius: 7px;
+    background: transparent;
+    color: vars.$primary-color;
+    cursor: pointer;
+    font: 600 0.8rem vars.$font-primary;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible {
+      background: vars.$primary-color;
+      color: vars.$background-color;
+    }
+
+    &:disabled {
+      border-color: rgba(vars.$text-secondary, 0.25);
+      color: vars.$text-secondary;
+      cursor: not-allowed;
+      opacity: 0.7;
     }
   }
 }
