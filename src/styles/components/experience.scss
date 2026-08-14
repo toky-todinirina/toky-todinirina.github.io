@@ -122,7 +122,7 @@
       color: vars.$text-secondary;
       font-size: 0.9rem;
       line-height: 1.6;
-
+      list-style: none;
       li::marker {
         color: vars.$primary-color;
       }
