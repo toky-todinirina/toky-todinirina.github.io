@@ -35,10 +35,21 @@ const Services = () => {
               <Icon className="services__icon" />
               <h3 className="services__name">{service.title}</h3>
               <p className="services__desc">{service.description}</p>
+              <div className="services__pricing">
+                <h4>Tarifs indicatifs</h4>
+                <ul>
+                  {service.pricing.map((rate) => (
+                    <li key={rate}>{rate}</li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           );
         })}
       </div>
+      <p className="services__notice">
+        Chaque mission fait l'objet d'un devis adapté à son périmètre et à ses contraintes.
+      </p>
     </Section>
   );
 };

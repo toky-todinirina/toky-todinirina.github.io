@@ -37,6 +37,39 @@
      transition: all .4s linear;
   }
 
+  .services__pricing {
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(vars.$text-on-primary, 0.16);
+    text-align: left;
+
+    h4 {
+      margin: 0 0 0.65rem;
+      color: vars.$secondary-color;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      display: grid;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      color: vars.$text-secondary;
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+
+    li::before {
+      content: "•";
+      color: vars.$primary-color;
+      margin-right: 0.45rem;
+    }
+  }
+
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 32px vars.$shadow-color;
@@ -52,4 +85,11 @@
       color: vars.$text-on-primary; // description également
     }
   }
+}
+
+.services__notice {
+  margin: 2rem auto 0;
+  color: vars.$text-secondary;
+  font-size: 0.9rem;
+  text-align: center;
 }
