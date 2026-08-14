@@ -111,7 +111,7 @@ export const experiences = [
     organizationUrl: "",
     reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
-    period: "Mai 2024 – Juillet 2024 (3 mois)",
+    period: "Mai 2024 – Juillet 2024",
     responsibilities: [
       "Encadrement de 5 enquêteurs pour le projet de Transfert Monétaire Non Conditionnel  de l'ONG FID Madagascar qui était exécuté par l'ONG Young Progress. Supervision du ciblage et des deux phases de validation communautaire de la vulnérabilité des ménages. Animation des formations MACC (Mesures d'Accompagnement) sur la gestion financière et contrôle du processus lors des paiements publics.",
     ],
@@ -141,7 +141,7 @@ export const experiences = [
     organizationUrl: "",
     reference: { name: "", role: "", email: "", phone: "" },
     type: "Prestation",
-    period: "Mai 2023 – Juillet 2023 (3 mois)",
+    period: "Mai 2023 – Juillet 2023",
     responsibilities: [
       "Gestion, encadrement et suivi des travailleurs locaux bénéficiaires des activités à Haute Intensité de Main-d'Œuvre (HIMO).",
       "Supervision des activités sur le terrain dans le cadre du projet Asa Vonjy Voina à Tuléar, suite au passage du cyclone Freddy.",
