@@ -139,7 +139,7 @@ export const experiences = [
     position: "Chef de Chantier",
     organization: "Agence d'Exécution Nasandratra",
     organizationUrl: "",
-    reference: { name: "", role: "", email: "", phone: "" },
+    reference: { name: "Lucette BESENDRA", role: "Chef de Mission", email: "egcnnasandrarta@gmail.com", phone: "0340987259" },
     type: "Prestation",
     period: "Mai 2023 – Juillet 2023",
     responsibilities: [
