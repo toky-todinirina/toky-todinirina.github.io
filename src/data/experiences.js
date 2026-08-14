@@ -15,6 +15,7 @@ export const experiences = [
       "Méthodes de recherche quantitatives",
       "Communication interpersonnelle",
       "Communication standardisée",
+      "Communication adaptative",
     ],
   },
   {
@@ -52,6 +53,7 @@ export const experiences = [
       "Méthodes de recherche quantitatives",
       "Communication interpersonnelle",
       "Communication standardisée",
+      "Communication adaptative",
     ],
   },
   {
@@ -81,9 +83,10 @@ export const experiences = [
     skills: [
       "Méthodes de recherche qualitatives",
       "Méthodes de recherche quantitatives",
-      "Communication adaptative",
       "Communication interpersonnelle",
       "Communication standardisée",
+      "Communication adaptative",
+
     ],
   },
   {
@@ -102,6 +105,7 @@ export const experiences = [
       "Méthodes de recherche quantitatives",
       "Communication interpersonnelle",
       "Communication standardisée",
+      "Communication adaptative",
     ],
   },
   {
@@ -118,6 +122,9 @@ export const experiences = [
     skills: [
       "Management d'équipe terrain",
       "Supervision socio-économique",
+      "Communication adaptative",
+      "Communication interpersonnelle",
+      "Communication standardisée",
     ],
   },
   {
