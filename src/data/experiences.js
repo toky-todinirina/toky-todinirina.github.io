@@ -18,8 +18,8 @@ export const experiences = [
     ],
   },
   {
-    id: "operateur-saisie-2026-01",
-    position: "Opérateur de saisie",
+    id: "data-entry-operator-2026-01",
+    position: "Data Entry Operator",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
     reference: { name: "Mihaja RAONIVOLOLONA", role: "Responsable Intégration des Systèmes de Suivi et Évaluation", email: "mihaja@projetjeuneleader.org", phone: " 34 79 791 98" },
@@ -55,8 +55,8 @@ export const experiences = [
     ],
   },
   {
-    id: "operateur-saisie-2025-07",
-    position: "Opérateur de saisie",
+    id: "data-entry-operator-2025-07",
+    position: "Data Entry Operator",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
         reference: { name: "Mihaja RAONIVOLOLONA", role: "Responsable Intégration des Systèmes de Suivi et Évaluation", email: "mihaja@projetjeuneleader.org", phone: " 34 79 791 98" },
