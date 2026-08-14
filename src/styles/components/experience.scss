@@ -123,6 +123,7 @@
       font-size: 0.9rem;
       line-height: 1.6;
       list-style: none;
+      text-align: justify;
       li::marker {
         color: vars.$primary-color;
       }
