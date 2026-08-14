@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FaTerminal, FaTimes } from "react-icons/fa";
 import "../../styles/components/terminal.scss";
 
 const COMMANDS = [
@@ -28,6 +29,7 @@ const scrollToSection = (id) => {
 };
 
 function Terminal() {
+  const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [history, setHistory] = useState([
     {
@@ -288,14 +290,44 @@ function Terminal() {
 
   useEffect(() => {
     inputRef.current?.focus();
-  }, []);
+  }, [isOpen]);
+
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+
+    if (isOpen) window.addEventListener("keydown", closeOnEscape);
+
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [isOpen]);
 
   const focusTerminal = () => {
     inputRef.current?.focus();
   };
 
   return (
-    <section className="terminal-section">
+    <>
+      {!isOpen && (
+        <button
+          className="terminal-launcher"
+          type="button"
+          onClick={() => setIsOpen(true)}
+          aria-label="Ouvrir le terminal interactif"
+          aria-expanded="false"
+          aria-controls="portfolio-terminal"
+        >
+          <FaTerminal aria-hidden="true" />
+          <span>Terminal</span>
+        </button>
+      )}
+
+      {isOpen && (
+    <section
+      id="portfolio-terminal"
+      className="terminal-section"
+      aria-label="Terminal interactif"
+    >
       <div className="terminal-container">
         <div className="terminal-window" onClick={focusTerminal}>
           <div className="terminal-header">
@@ -308,6 +340,18 @@ function Terminal() {
             <div className="terminal-title">
               toky@portfolio:~
             </div>
+
+            <button
+              className="terminal-close"
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                setIsOpen(false);
+              }}
+              aria-label="Fermer le terminal"
+            >
+              <FaTimes aria-hidden="true" />
+            </button>
           </div>
 
           <div
@@ -375,6 +419,8 @@ function Terminal() {
         </p>
       </div>
     </section>
+      )}
+    </>
   );
 }
 
