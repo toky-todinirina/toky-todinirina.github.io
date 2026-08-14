@@ -1,5 +1,5 @@
 import Project from "../assets/images/avatar.png";
-import Portfolio from "../assets/images/portfolio.png";
+import Portfolio from "../assets/images/avatarpng.png";
 import Portfolio2 from "../assets/images/dashboard.png"
 import Portfolio3 from "../assets/images/e-commerce.png";
 export const projects = [

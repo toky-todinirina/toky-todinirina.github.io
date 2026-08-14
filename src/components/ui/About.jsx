@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Section from "../common/Section";
 import "../../styles/components/about.scss";
-import Avatar from "../../assets/images/avatar.png";
+import Avatar from "../../assets/images/photo.png";
 import Highlights from "../common/Hightlights";
 
 const About = () => {
@@ -51,13 +51,11 @@ const About = () => {
               claires et élégantes, en utilisant <strong>Vite</strong>,
               <strong> SCSS</strong> et <Highlights> React</Highlights>.
             </p>
-
             <p>
               Mon objectif est de concevoir des applications web maintenables,
               évolutives et orientées utilisateur.
             </p>
           </div>
-
           <div className="about__stats">
  {aboutCards.map((card, index) => (
         <motion.div

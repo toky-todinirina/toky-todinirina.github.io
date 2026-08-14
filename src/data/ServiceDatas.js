@@ -16,8 +16,8 @@ export const servicesData = [
   },
   {
     id: 3,
-    title: "UI / UX Design",
-    description: "Design d’interfaces attractives et expérience utilisateur optimale.",
+    title: "Audio Transcripts",
+    description: "Transcript audio datas into text ",
     icon: FaPaintBrush,
   },
 ];
