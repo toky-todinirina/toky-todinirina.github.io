@@ -2,6 +2,7 @@ import './styles/main.scss';
 import Header from './components/layout/Header';
 import About from './components/ui/About';
 import Skills from './components/ui/Skills';
+import Experience from './components/ui/Experience';
 import Terminal from './components/common/Terminal';
 import Projects from './components/ui/Projects';
 import Services from './components/ui/Services';
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <About />
         <Skills />
+        <Experience />
         <Terminal />
         <Services />
         <Projects />

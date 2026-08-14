@@ -111,6 +111,20 @@
 }
 
 /* Media queries pour mobile */
+@media (min-width: 769px) and (max-width: 960px) {
+  .header {
+    width: 92%;
+
+    &__nav {
+      gap: 1rem;
+
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     &__burger {

@@ -8,6 +8,7 @@ import {
   FiMail,
   FiUser,
   FiLayers,
+  FiBriefcase,
   FiFolder,
   FiArrowUp,
 } from "react-icons/fi";
@@ -31,6 +32,9 @@ const Footer = () => {
             </a>
             <a href="#competences" aria-label="Compétences" title="Compétences">
               <FiLayers />
+            </a>
+            <a href="#experience" aria-label="Expériences" title="Expériences">
+              <FiBriefcase />
             </a>
             <a href="#projects" aria-label="Projets" title="Projets">
               <FiFolder />

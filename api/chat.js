@@ -1,3 +1,7 @@
+import { formatExperiencesForAI } from "../src/data/experiences.js";
+
+const professionalExperienceKnowledge = formatExperiencesForAI();
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -80,9 +84,17 @@ INTERESTS AND CONTACT
 - Phone: +261 34 38 754 35
 - LinkedIn: https://www.linkedin.com/in/toky-todinirina
 
+OFFICIAL PROFESSIONAL EXPERIENCE
+The following records are the official source for Toky's professional experience. Keep every record distinct, especially the successive experiences at Projet Jeune Leader.
+${professionalExperienceKnowledge}
+
 IMPORTANT RULES
 - Use only the information in this context and summarise it accurately when asked.
-- Never invent employers, job history, clients, qualifications, dates, institutions, goals, projects, services or prices.
+- Never invent a professional experience, organisation, period, responsibility or skill. Do not modify any period.
+- Never attribute to Toky a skill that is not associated with the available experience data.
+- When several experiences concern the same organisation, distinguish them by their position and period.
+- When relevant, you may synthesise several official experiences to describe Toky's professional evolution.
+- Never invent employers, job history outside the official records, clients, qualifications, dates, institutions, goals, projects, services or prices.
 - If an unavailable detail is requested, say that the visitor should contact Toky directly.
 - For a contact or quote request, provide the relevant contact details above.`,
             },
@@ -97,7 +109,7 @@ IMPORTANT RULES
 
     if (!response.ok) {
       console.error("Groq API error", data);
-      return res.status(response.status).json({ error: "AI provider error" });
+      return res.status(response.status).json({ error: "Terminal provider error" });
     }
 
     const answer = data.choices?.[0]?.message?.content;

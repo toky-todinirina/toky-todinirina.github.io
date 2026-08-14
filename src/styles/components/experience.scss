@@ -1,0 +1,159 @@
+@use "../utils/variables" as vars;
+
+.experience-timeline {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 2.25rem;
+
+  &::before {
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 0.65rem;
+    width: 1px;
+    background: linear-gradient(vars.$secondary-variant, rgba(vars.$secondary-color, 0.15));
+    content: "";
+  }
+}
+
+.experience-card {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid rgba(vars.$text-on-primary, 0.11);
+  border-radius: 16px;
+  background: vars.$primary-variant;
+  box-shadow: 0 12px 28px rgba(vars.$shadow-color, 0.32);
+
+  &__marker {
+    position: absolute;
+    top: 1.65rem;
+    left: -2rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 3px solid vars.$background-color;
+    border-radius: 50%;
+    background: vars.$primary-color;
+    box-shadow: 0 0 0 4px rgba(vars.$primary-color, 0.16);
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+
+    h3 {
+      margin: 0 0 0.35rem;
+      color: vars.$text-on-primary;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+    }
+  }
+
+  &__organization,
+  &__period,
+  &__body h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  &__organization,
+  &__period {
+    margin: 0;
+    color: vars.$text-secondary;
+    font-size: 0.9rem;
+
+    svg {
+      color: vars.$secondary-color;
+    }
+  }
+
+  &__type {
+    flex-shrink: 0;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(vars.$primary-color, 0.14);
+    color: vars.$primary-color;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  &__period {
+    width: fit-content;
+    margin-bottom: 1.25rem;
+    padding: 0.4rem 0.65rem;
+    border-radius: 6px;
+    background: rgba(vars.$text-on-primary, 0.05);
+  }
+
+  &__body {
+    h4 {
+      margin: 0 0 0.65rem;
+      color: vars.$text-on-primary;
+      font-size: 0.92rem;
+
+      svg {
+        color: vars.$primary-color;
+      }
+    }
+
+    ul {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0;
+      padding-left: 1.15rem;
+      color: vars.$text-secondary;
+      font-size: 0.9rem;
+      line-height: 1.6;
+
+      li::marker {
+        color: vars.$primary-color;
+      }
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.35rem 0.65rem;
+      border: 1px solid rgba(vars.$secondary-color, 0.2);
+      border-radius: 999px;
+      color: vars.$secondary-color;
+      font-size: 0.75rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-timeline {
+    padding-left: 1.5rem;
+
+    &::before {
+      left: 0.35rem;
+    }
+  }
+
+  .experience-card {
+    padding: 1.2rem;
+
+    &__marker {
+      left: -1.35rem;
+    }
+
+    &__header {
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+  }
+}
