@@ -116,7 +116,7 @@
 }
 
 .terminal-body {
-  height: min(420px, 55vh);
+  height: min(360px, 50vh);
   padding: 1.5rem;
   overflow-y: auto;
   color: vars.$text-on-primary;
@@ -200,7 +200,7 @@
   }
 
   .terminal-body {
-    height: min(350px, 60vh);
+    height: min(300px, 55vh);
     padding: 1rem;
     font-size: 0.78rem;
   }
