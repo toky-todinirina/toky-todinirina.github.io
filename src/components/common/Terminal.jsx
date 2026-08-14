@@ -14,9 +14,9 @@ const COMMANDS = [
   "github",
   "linkedin",
   "whoami",
+  "ask",
   "clear",
 ];
-
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
 
@@ -30,6 +30,7 @@ const scrollToSection = (id) => {
 
 function Terminal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isThinking, setIsThinking] = useState(false);
   const [input, setInput] = useState("");
   const [history, setHistory] = useState([
     {
@@ -57,8 +58,32 @@ function Terminal() {
     ]);
   };
 
+  const askAI = async (message) => {
+    setIsThinking(true);
+
+    try {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "AI request failed");
+      }
+
+      addOutput(data.answer.split("\n"));
+    } catch (error) {
+      addOutput(["AI assistant error:", error.message]);
+    } finally {
+      setIsThinking(false);
+    }
+  };
+
   const executeCommand = (rawCommand) => {
-    const command = rawCommand.trim().toLowerCase();
+    const trimmedCommand = rawCommand.trim();
+    const command = trimmedCommand.toLowerCase();
 
     if (!command) return;
 
@@ -77,10 +102,24 @@ function Terminal() {
 
     setHistoryIndex(-1);
 
+    if (command.startsWith("ask ")) {
+      const question = trimmedCommand.slice(4).trim();
+
+      if (!question) {
+        addOutput(["Usage: ask <your question>"]);
+        return;
+      }
+
+      addOutput(["AI is thinking..."]);
+      askAI(question);
+      return;
+    }
+
     switch (command) {
       case "help":
         addOutput([
           "Available commands:",
+          "  ask <question> : Ask the AI assistant",
           "",
           "  about       → About me",
           "  skills      → Technical skills",
@@ -94,6 +133,10 @@ function Terminal() {
           "  whoami      → Who is Toky?",
           "  clear       → Clear terminal",
         ]);
+        break;
+
+      case "ask":
+        addOutput(["Usage: ask <your question>"]);
         break;
 
       case "about":
@@ -404,9 +447,11 @@ function Terminal() {
                   setInput(event.target.value)
                 }
                 onKeyDown={handleKeyDown}
+                disabled={isThinking}
                 autoComplete="off"
                 spellCheck="false"
                 aria-label="Terminal command"
+                aria-busy={isThinking}
               />
 
               <span className="terminal-cursor" />
@@ -423,5 +468,4 @@ function Terminal() {
     </>
   );
 }
-
 export default Terminal;
