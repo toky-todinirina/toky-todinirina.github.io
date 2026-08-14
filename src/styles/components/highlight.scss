@@ -3,7 +3,7 @@
 .highlight {
   color: vars.$accent-color;
   font-weight: 600;
-  background-color: rgba(255, 64, 129, 0.1); // léger fond accent
+  background-color: rgba(vars.$accent-color, 0.12);
   padding: 2px 6px;
   border-radius: 4px;
   transition: all 0.3s ease;

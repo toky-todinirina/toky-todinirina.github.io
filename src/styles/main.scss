@@ -6,5 +6,6 @@
 @use "./base/_reset.scss";
 
 body{
-    background-color: rgb(1, 1, 45);
+    background-color: var.$background-color;
+    color: var.$text-primary;
 }

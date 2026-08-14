@@ -1,13 +1,16 @@
 // Couleurs Material Design
-$primary-color: #0cc2ff;
-$primary-variant: #022072;
-$secondary-color: #03dac6;
-$secondary-variant: #018786;
-$background-color: #f5f5f5;
-$surface-color: #ffffff;
-$text-primary: #212121;
-$text-secondary: #757575;
-$text-on-primary: #ffffff;
+$primary-color: #38bdf8;
+$primary-variant: #111c2f;
+$secondary-color: #60a5fa;
+$secondary-variant: #2563eb;
+$background-color: #0b1220;
+$surface-color: #162235;
+$text-primary: #e6edf7;
+$text-secondary: #9aa9bf;
+$text-on-primary: #f8fafc;
+
+// Fond bleu acier pour les portraits avec transparence
+$profile-background: #1b365d;
 
 // États
 $success-color: #4caf50;
@@ -16,12 +19,12 @@ $warning-color: #ff9800;
 $info-color: #2196f3;
 
 // Ombres
-$shadow-color: #022072;
-$accent-color: #7f87fd;
+$shadow-color: #020617;
+$accent-color: #60a5fa;
 
 
 $radius-lg: 16px;
-$shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+$shadow-soft: 0 10px 25px rgba($shadow-color, 0.35);
 
 //fonts
 $font-primary: 'Inter', system-ui, sans-serif;
