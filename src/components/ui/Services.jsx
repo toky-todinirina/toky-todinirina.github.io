@@ -15,7 +15,7 @@ const Services = () => {
       id="services"
       title="Ce que je fais"
       subtitle={
-        <>Ce que je peux réaliser pour <Highlights>vos projets</Highlights></>
+        <>Mes services : développement <Highlights>Front-End</Highlights> et solutions <Highlights>données</Highlights> complètes</>
       }
       align="center"
     >

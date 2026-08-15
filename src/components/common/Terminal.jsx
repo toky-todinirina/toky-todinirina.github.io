@@ -36,8 +36,8 @@ function Terminal() {
     {
       type: "output",
       content: [
-        "Welcome to Toky's interactive portfolio.",
-        "Type 'help' for commands or 'ask <question>' to chat with the AI.",
+        "Welcome to Toky's portfolio – Digital • Front-End • Data • Communication.",
+        "Type 'help' for commands or 'ask <question>' to learn more about my services.",
       ],
     },
   ]);

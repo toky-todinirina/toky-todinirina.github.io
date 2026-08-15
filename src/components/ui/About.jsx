@@ -5,16 +5,16 @@ import Avatar from "../../assets/images/photo.png";
 import Highlights from "../common/Hightlights";
 
 const aboutCards = [
-  { number: "4+", label: "Années d’apprentissage" },
-  { number: "10+", label: "Projets réalisés" },
-  { number: "100%", label: "Motivation" },
+  { number: "Front-End", label: "Développement d'interfaces React & Vite" },
+  { number: "UX", label: "Expérience utilisateur & accessibilité" },
+  { number: "Data", label: "Saisie, transcription et organisation de données" },
 ];
 
 const About = () => (
   <Section
     id="about"
     title="Qui suis-je ?"
-    subtitle="Développeur Front-End et Expert en Transcription, Collecte de données et Data Entry"
+    subtitle="Développeur Front-End • Spécialiste Data & Communication"
     align="left"
   >
     <div className="about">
@@ -37,20 +37,18 @@ const About = () => (
       >
         <div className="about__text">
           <p>
-            Je suis <Highlights>développeur Front-End</Highlights> et assistant de
-            recherche, passionné par la création d’interfaces modernes,
-            performantes et accessibles.
+            Je suis <Highlights>développeur Front-End</Highlights> React créant des interfaces modernes et accessibles.
+            Ma différenciation ? Une expertise unique combinant <Highlights>data</Highlights>, communication et terrain.
           </p>
 
           <p>
-            J’accompagne aussi vos projets de <Highlights>transcription</Highlights>,
-            de collecte de données sur terrain et de <Highlights>Data Entry</Highlights>,
-            avec une attention particulière à la précision et à l’organisation des données.
+            <Highlights>Collecte, transcription et organisation de données</Highlights> – expertise acquise en mission auprès de
+            projets de recherche, complétant ma palette Front-End.
           </p>
 
           <p>
-            Avec React, Vite et SCSS, mon objectif est de livrer des solutions web
-            maintenables, évolutives et pensées pour les utilisateurs.
+            Avec React, Vite et SCSS, je conçois des solutions maintenables et évolutives,
+            véritablement adaptées à vos <Highlights>utilisateurs et enjeux métier</Highlights>.
           </p>
         </div>
 

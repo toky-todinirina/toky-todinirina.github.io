@@ -8,7 +8,9 @@ export const experiences = [
     type: "Prestation",
     period: "Avril 2026 – Juin 2026",
     responsibilities: [
-      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
+      "Collecte de données terrain via RedCap auprès de jeunes collégiens (région Haute-Matsiatra)",
+      "Évaluation de l'impact - programmes éducatifs (sexualité, citoyenneté, relations saines)",
+      "Protocole d'investigation - impartialité, confidentialité, objectivité des réponses",
     ],
     skills: [
       "Méthodes de recherche qualitatives",
@@ -27,7 +29,9 @@ export const experiences = [
     type: "Prestation",
     period: "Janvier 2026 – Mars 2026",
     responsibilities: [
-      "Codage, saisie et imputation de données d'enquêtes terrain sur papier vers Google Sheets. Transcription intégrale d'enregistrements audio (études qualitatives et relances/probing) sur Google Docs. Excellente maîtrise de la frappe rapide (60 mots/min) avec un taux de précision de 97 % et un contrôle qualité rigoureux.",
+      "Codage et saisie - données d'enquêtes terrain (papier vers Google Sheets)",
+      "Transcription intégrale - enregistrements audio (études qualitatives, relances/probing vers Google Docs)",
+      "Performance - 60 mots/min | Précision 97% | Contrôle qualité rigoureux",
     ],
     skills: [
       "Saisie de données en ligne",
@@ -42,11 +46,13 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-      reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
+    reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Septembre 2025 – Octobre 2025",
     responsibilities: [
-      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
+      "Collecte de données terrain via RedCap auprès de jeunes collégiens (région Haute-Matsiatra)",
+      "Évaluation de l'impact - programmes éducatifs (sexualité, citoyenneté, relations saines)",
+      "Protocole d'investigation - impartialité, confidentialité, objectivité des réponses",
     ],
     skills: [
       "Méthodes de recherche qualitatives",
@@ -61,11 +67,13 @@ export const experiences = [
     position: "Data Entry Operator",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-        reference: { name: "Mihaja RAONIVOLOLONA", role: "Responsable Intégration des Systèmes de Suivi et Évaluation", email: "mihaja@projetjeuneleader.org", phone: " 34 79 791 98" },
+    reference: { name: "Mihaja RAONIVOLOLONA", role: "Responsable Intégration des Systèmes de Suivi et Évaluation", email: "mihaja@projetjeuneleader.org", phone: " 34 79 791 98" },
     type: "Prestation",
     period: "Juillet 2025 – Août 2025",
     responsibilities: [
-      "Codage, saisie et imputation de données d'enquêtes terrain sur papier vers Google Sheets. Transcription intégrale d'enregistrements audio (études qualitatives et relances/probing) sur Google Docs. Excellente maîtrise de la frappe rapide (60 mots/min) avec un taux de précision de 97 % et un contrôle qualité rigoureux.",
+      "Codage et saisie - données d'enquêtes terrain (papier vers Google Sheets)",
+      "Transcription intégrale - enregistrements audio (études qualitatives, relances/probing vers Google Docs)",
+      "Performance - 60 mots/min | Précision 97% | Contrôle qualité rigoureux",
     ],
     skills: ["Saisie de données", "Rigueur éditoriale"],
   },
@@ -74,11 +82,13 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-      reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
+    reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Avril 2025 – Juin 2025",
     responsibilities: [
-      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
+      "Collecte de données terrain via RedCap auprès de jeunes collégiens (région Haute-Matsiatra)",
+      "Évaluation de l'impact - programmes éducatifs (sexualité, citoyenneté, relations saines)",
+      "Protocole d'investigation - impartialité, confidentialité, objectivité des réponses",
     ],
     skills: [
       "Méthodes de recherche qualitatives",
@@ -86,7 +96,6 @@ export const experiences = [
       "Communication interpersonnelle",
       "Communication standardisée",
       "Communication adaptative",
-
     ],
   },
   {
@@ -94,11 +103,13 @@ export const experiences = [
     position: "Assistant de recherche",
     organization: "Projet Jeune Leader",
     organizationUrl: "",
-      reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
+    reference: { name: "Fandresena ANJARATODISOA", role: " Coordinateur de Recherche et Projets Spéciaux", email: "fandresena@projetjeuneleader.org", phone: "034 68 690 45" },
     type: "Prestation",
     period: "Septembre 2024 – Novembre 2024",
     responsibilities: [
-      "Collecte de données sur le terrain par le biais de RedCap auprès de jeunes collégiens dans la région Haute-Matsiatra, afin d'évaluer l'impact des programmes éducatifs (sur la sexualité, la citoyenneté, les relations saines) du Projet Jeune Leader. Adhésion rigoureuse au protocole d'investigation : impartialité, confidentialité et assurance de l'objectivité des réponses.",
+      "Collecte de données terrain via RedCap auprès de jeunes collégiens (région Haute-Matsiatra)",
+      "Évaluation de l'impact - programmes éducatifs (sexualité, citoyenneté, relations saines)",
+      "Protocole d'investigation - impartialité, confidentialité, objectivité des réponses",
     ],
     skills: [
       "Méthodes de recherche qualitatives",
@@ -117,7 +128,9 @@ export const experiences = [
     type: "Prestation",
     period: "Mai 2024 – Juillet 2024",
     responsibilities: [
-      "Encadrement de 5 enquêteurs pour le projet de Transfert Monétaire Non Conditionnel  de l'ONG FID Madagascar qui était exécuté par l'ONG Young Progress. Supervision du ciblage et des deux phases de validation communautaire de la vulnérabilité des ménages. Animation des formations MACC (Mesures d'Accompagnement) sur la gestion financière et contrôle du processus lors des paiements publics.",
+      "Encadrement - 5 enquêteurs terrain (Projet Transfert Monétaire Non Conditionnel, FID Madagascar)",
+      "Supervision du ciblage et validation communautaire (2 phases) de la vulnérabilité des ménages",
+      "Animation formations MACC (Mesures d'Accompagnement) - gestion financière et contrôle paiements publics",
     ],
     skills: [
       "Management d'équipe terrain",
@@ -136,8 +149,8 @@ export const experiences = [
     type: "Volontariat",
     period: "Février 2024",
     responsibilities: [
-      "Rédaction et publication d'un article thématique majeur intitulé \"Digitalisation et Vie Estudiantine Harmonieuse\" pour la revue universitaire.",
-      "Valorisation et démonstration de l'apport des outils numériques dans le renforcement de la cohésion sociale et la facilitation du quotidien des étudiants.",
+      "Article publié - Digitalisation et Vie Estudiantine Harmonieuse (revue universitaire)",
+      "Thème - apport des outils numériques dans la cohésion sociale et le quotidien étudiant",
     ],
     skills: ["Communication écrite", "Google Sheets", "Rédaction de rapports"],
   },
@@ -150,9 +163,9 @@ export const experiences = [
     type: "Prestation",
     period: "Mai 2023 – Juillet 2023",
     responsibilities: [
-      "Gestion, encadrement et suivi des travailleurs locaux bénéficiaires des activités à Haute Intensité de Main-d'Œuvre (HIMO).",
-      "Supervision des activités sur le terrain dans le cadre du projet Asa Vonjy Voina à Tuléar, suite au passage du cyclone Freddy.",
-      "Liaison opérationnelle pour l'association Nasandratra, partenaire officiel de l'ONG FID (Fonds d'Intervention pour le Développement).",
+      "Gestion et encadrement - équipe de travailleurs locaux (activités HIMO - Haute Intensité de Main-d'Œuvre)",
+      "Supervision terrain - Projet Asa Vonjy Voina à Tuléar (post-cyclone Freddy)",
+      "Liaison opérationnelle - Nasandratra (partenaire officiel FID - Fonds d'Intervention pour le Développement)",
     ],
     skills: [
       "Gestion de chantier",

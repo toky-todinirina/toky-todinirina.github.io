@@ -1,5 +1,6 @@
 import Section from "../common/Section";
 import Button from "../common/Button";
+import Highlights from "../common/Hightlights";
 import "../../styles/components/contact.scss";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
@@ -11,7 +12,7 @@ const Contact = () => {
       title="Contact"
       subtitle={
         <>
-          Discutons de votre <span class="highlight">projet</span>
+          Décrivez votre <Highlights>besoin</Highlights> ou votre projet, et je vous répondrai avec la bonne solution.
         </>
       }
       align="center"
@@ -20,10 +21,16 @@ const Contact = () => {
         {/* CARD INFO */}
         <div className="contact__card contact__info">
           <h3>Mes coordonnées</h3>
-          <p>
-            N’hésitez pas à me contacter pour discuter d’un projet, d’une
-            collaboration ou simplement échanger.
+          <p className="contact__intro">
+            Je peux vous accompagner sur des missions concrètes, rapides et utiles :
           </p>
+
+          <div className="contact__missions" aria-label="Types de missions">
+            <span>Développement Front-End</span>
+            <span>Data Entry</span>
+            <span>Transcription</span>
+            <span>Collecte de données sur terrain</span>
+          </div>
 
           <ul className="contact__list">
             <li>

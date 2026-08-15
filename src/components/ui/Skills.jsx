@@ -74,7 +74,6 @@ const Skills = () => {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 />
               </div>
-              <span className="skill-bar__percentage">{progress}%</span>
             </motion.div>
           );
         })}

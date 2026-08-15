@@ -24,7 +24,7 @@ const Footer = () => {
       >
         <div className="footer__container">
           <div className="footer__brand">
-            <p>Développeur Front-End React</p>
+            <p>Front-End Developer • Data & Communication Specialist</p>
           </div>
           <div className="footer__nav-icons">
             <a href="#about" aria-label="À propos" title="À propos">
