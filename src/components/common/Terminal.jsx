@@ -102,15 +102,15 @@ function Terminal() {
 
     setHistoryIndex(-1);
 
-    if (command.startsWith("ask ")) {
+    if (command.startsWith("ask")) {
       const question = trimmedCommand.slice(4).trim();
 
       if (!question) {
-        addOutput(["Usage: ask <your question>"]);
+        addOutput(["Usage: ask <Votre question>"]);
         return;
       }
 
-      addOutput(["Terminal is thinking..."]);
+      addOutput(["Le Terminal est en train de réfléchir à votre question..."]);
       askAI(question);
       return;
     }
@@ -118,8 +118,8 @@ function Terminal() {
     switch (command) {
       case "help":
         addOutput([
-          "Available commands:",
-          "  ask <question> : Ask the AI assistant",
+          "Commandes disponibles:",
+          "  ask <question> : Discuter avec l'assistant AI du portfolio",
           "",
           "  about       → About me",
           "  skills      → Technical skills",
@@ -135,13 +135,13 @@ function Terminal() {
         ]);
         break;
 
-      case "ask":
-        addOutput(["Usage: ask <your question>"]);
+      case "ask: ":
+        addOutput(["Usage: ask <Votre question>"]);
         break;
 
       case "about":
         addOutput([
-          "Navigating to About...",
+          "Navigation vers à propos...",
         ]);
 
         setTimeout(() => {
@@ -152,7 +152,7 @@ function Terminal() {
 
       case "skills":
         addOutput([
-          "Loading technical skills...",
+          "Lecture des compétences ...",
         ]);
 
         setTimeout(() => {
@@ -163,7 +163,7 @@ function Terminal() {
 
       case "services":
         addOutput([
-          "Loading available services...",
+          "Lecture des services...",
         ]);
 
         setTimeout(() => {
@@ -174,7 +174,7 @@ function Terminal() {
 
       case "projects":
         addOutput([
-          "Loading projects...",
+          "Lecture des projets...",
         ]);
 
         setTimeout(() => {
@@ -185,7 +185,7 @@ function Terminal() {
 
       case "experience":
         addOutput([
-          "Loading experience...",
+          "Lecture de l'expérience...",
         ]);
 
         setTimeout(() => {
@@ -196,7 +196,7 @@ function Terminal() {
 
       case "contact":
         addOutput([
-          "Opening contact section...",
+          "Navigation vers la section de contact...",
         ]);
 
         setTimeout(() => {
@@ -218,11 +218,11 @@ function Terminal() {
 
       case "resume":
         addOutput([
-          "Opening resume...",
+          "Ouverture du CV...",
         ]);
 
         setTimeout(() => {
-          window.open("/resume.pdf", "_blank");
+          window.open("src/assets/resume.pdf", "_blank");
         }, 300);
 
         break;
