@@ -24,7 +24,11 @@ const Footer = () => {
       >
         <div className="footer__container">
           <div className="footer__brand">
-            <p>Front-End Developer • Data & Communication Specialist</p>
+            <p>Toky Todinirina</p>
+            <div className="footer__tagline">
+              <p>Front-End Developer • Data & Communication Specialist</p>
+              <p style={{marginTop: '0.75rem'}}>Créer des interfaces web performantes et des solutions data adaptées à vos enjeux métier.</p>
+            </div>
           </div>
           <div className="footer__nav-icons">
             <a href="#about" aria-label="À propos" title="À propos">

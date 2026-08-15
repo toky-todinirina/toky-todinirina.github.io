@@ -21,10 +21,19 @@
     }
 
     &__brand {
-
         p {
             font-size: 0.9rem;
-            color: vars.$surface-color;
+            color: vars.$text-primary;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer__tagline {
+            font-size: 0.85rem;
+            color: vars.$text-secondary;
+            line-height: 1.5;
+            max-width: 300px;
+            margin: 0 auto;
         }
     }
 
