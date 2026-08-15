@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <Section
       id="services"
-      title="Services"
+      title="Ce que je fais"
       subtitle={
         <>Ce que je peux réaliser pour <Highlights>vos projets</Highlights></>
       }
