@@ -19,9 +19,9 @@ export const servicesData = [
     description: "Conversion audio/vidéo vers texte structuré et documenté.",
     icon: FaFileAlt,
     pricing: [
-      "Audio clair (1–2 intervenants) : 5 000 Ar/min",
-      "Audio complexe : 7 500 – 10 000 Ar/min",
-      "Urgence : +25 à +50 %",
+      "Audio clair (1–2 intervenants) : 3 000 Ar/min",
+      "Audio complexe : 5 500 – 75 000 Ar/min",
+      "Urgence : +15 à +30 %",
     ],
   },
   {
@@ -30,9 +30,9 @@ export const servicesData = [
     description: "Enquêtes terrain rigoureuses avec méthodologies de recherche qualifiée.",
     icon: FaMapMarkedAlt,
     pricing: [
-      "À partir de 100 000 Ar/jour",
-      "Tarif courant : 100 000 – 200 000 Ar/jour",
-      "Mission complexe : 150 000 – 250 000 Ar/jour",
+      "À partir de 60 000 Ar/jour",
+      "Tarif courant : 50 000 – 100 000 Ar/jour",
+      "Mission complexe : 100 000 – 150 000 Ar/jour",
       "Hors frais de déplacement",
     ],
   },
@@ -42,8 +42,8 @@ export const servicesData = [
     description: "Saisie, codage et organisation de données avec contrôle qualité.",
     icon: FaKeyboard,
     pricing: [
-      "Saisie simple : 20 000 Ar/h",
-      "Avec vérification : 30 000 Ar/h",
+      "Saisie simple : 15 000 Ar/h",
+      "Avec vérification : 25 000 Ar/h",
       "Nettoyage / structuration : 35 000 Ar/h et +",
     ],
   },
