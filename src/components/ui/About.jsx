@@ -13,8 +13,8 @@ const aboutCards = [
 const About = () => (
   <Section
     id="about"
-    title="À propos de moi"
-    subtitle="Développeur Front-End et assistant de recherche"
+    title="Qui suis-je ?"
+    subtitle="Développeur Front-End et Expert en Transcription, Collecte de données et Data Entry"
     align="left"
   >
     <div className="about">
