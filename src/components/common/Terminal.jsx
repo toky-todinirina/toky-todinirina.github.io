@@ -222,14 +222,14 @@ function Terminal() {
         ]);
 
         setTimeout(() => {
-          window.open("src\\assets\\resume.pdf", "_blank");
+          window.open("assets\\resume.pdf", "_blank");
         }, 300);
 
         break;
 
       case "github":
         addOutput([
-          "Opening GitHub...",
+          "Ouverture de GitHub...",
         ]);
 
         setTimeout(() => {
