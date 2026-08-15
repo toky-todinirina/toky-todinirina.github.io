@@ -43,6 +43,7 @@ const Services = () => {
                   ))}
                 </ul>
               </div>
+              <a href="#contact" className="services__cta">Demander un devis</a>
             </motion.div>
           );
         })}

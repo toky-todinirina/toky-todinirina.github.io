@@ -20,6 +20,7 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  min-height: 520px;
   // transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
   transition: all .4s linear;
   .services__icon {
@@ -39,6 +40,7 @@
 
   .services__pricing {
     width: 100%;
+    margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid rgba(vars.$text-on-primary, 0.16);
     text-align: left;
@@ -70,6 +72,24 @@
     }
   }
 
+  .services__cta {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: vars.$primary-color;
+    color: vars.$primary-variant;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: vars.$secondary-color;
+      transform: scale(1.05);
+    }
+  }
+
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 32px vars.$shadow-color;
@@ -92,4 +112,21 @@
   color: vars.$text-secondary;
   font-size: 0.9rem;
   text-align: center;
+}
+
+/* Responsive - Tablette (2 cartes par ligne) */
+@media (max-width: 900px) {
+  .services__item {
+    flex: 1 1 calc(50% - 0.875rem);
+    max-width: none;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+  .services__item {
+    flex: 1 1 100%;
+    max-width: none;
+    min-height: auto;
+  }
 }
