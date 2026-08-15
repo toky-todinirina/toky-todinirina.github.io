@@ -1,8 +1,8 @@
 @use "../utils/variables" as vars;
 
 .footer {
-    background: rgba(vars.$primary-color, 1);
-    color: vars.$surface-color;
+    background: rgba(vars.$primary-variant, 0.95);
+    color: vars.$text-secondary;
     border-top: 1px solid vars.$shadow-color;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
