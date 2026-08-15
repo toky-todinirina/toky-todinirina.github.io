@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.env.local
+.env.*local
 IA_API_KEY
 
 # Editor directories and files
@@ -23,3 +25,4 @@ IA_API_KEY
 *.njsproj
 *.sln
 *.sw?
+.vercel
