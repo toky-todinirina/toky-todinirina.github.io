@@ -31,7 +31,7 @@ export const servicesData = [
     icon: FaMapMarkedAlt,
     pricing: [
       "À partir de 60 000 Ar/jour",
-      "Tarif courant : 50 000 – 100 000 Ar/jour",
+      "Tarif courant : 60 000 – 100 000 Ar/jour",
       "Mission complexe : 100 000 – 150 000 Ar/jour",
       "Hors frais de déplacement",
     ],
