@@ -18,7 +18,7 @@
     "test": "test",
     "dev": "vite",
     "build": "vite build",
-    "nodemon":"nodemon api/messages.js"
+    "nodemon": "nodemon api/messages.js"
   },
   "dependencies": {
     "axios": "^1.15.0",
@@ -34,6 +34,7 @@
     "react-intersection-observer": "^10.0.2",
     "react-lazyload": "^3.2.1",
     "react-router-dom": "^7.12.0",
+    "resend": "^6.20.0",
     "sass": "^1.97.2",
     "swiper": "^12.0.3",
     "yup": "^1.7.1"
