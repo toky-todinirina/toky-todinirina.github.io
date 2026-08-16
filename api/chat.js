@@ -8,7 +8,9 @@ export default async function handler(req, res) {
   }
 
   if (!process.env.GROQ_API_KEY) {
-    return res.status(500).json({ error: "Server AI configuration is missing" });
+    return res
+      .status(500)
+      .json({ error: "Server AI configuration is missing" });
   }
 
   try {
@@ -101,20 +103,22 @@ IMPORTANT RULES
 - Facebook link: facebook.com/tokytodinirina,
 - Linkedin link : linkedin.com/in/toky-todinirina,
 - if you need more information about Toky, you can also visit his portfolio website: https://toky-todinirina.vercel.app.
-- if someone asks about his familiy or family members, youn check on all availables informations on the internet about that bu respect their intimity`,
+- if someone asks about his familiy or family members, youn check on all availables informations on the internet about that`,
             },
             { role: "user", content: message.trim() },
           ],
           temperature: 0.4,
         }),
-      }
+      },
     );
 
     const data = await response.json();
 
     if (!response.ok) {
       console.error("Groq API error", data);
-      return res.status(response.status).json({ error: "Terminal provider error" });
+      return res
+        .status(response.status)
+        .json({ error: "Terminal provider error" });
     }
 
     const answer = data.choices?.[0]?.message?.content;
