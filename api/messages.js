@@ -45,7 +45,7 @@ export default async function handler(req, res) {
 
 
     await resend.emails.send({
-  from: "Portfolio <onboarding@resend.dev>",
+  from: "PORTFOLIO MESSAGE <onboarding@resend.dev>",
   to: [email.trim()],
   subject: "Merci pour votre message",
   html: `
