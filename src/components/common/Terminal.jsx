@@ -36,8 +36,8 @@ function Terminal() {
     {
       type: "output",
       content: [
-        "Welcome to Toky's portfolio – Digital • Front-End • Data • Communication.",
-        "Type 'help' for commands or 'ask <question>' to learn more about my services.",
+        "Bienvenu sur mon Portfolio interactif !",
+        "Tapez 'help' pour les commandes par defauts ou 'ask <question>' pour poser une question à l'assistant AI.",
       ],
     },
   ]);
@@ -70,12 +70,12 @@ function Terminal() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Terminal command failed");
+        throw new Error(data.error || "La requets a été rejetée");
       }
 
       addOutput(data.answer.split("\n"));
     } catch (error) {
-      addOutput(["Terminal assistant error:", error.message]);
+      addOutput(["Erreur de l'Assistant du Terminal:", error.message]);
     } finally {
       setIsThinking(false);
     }
