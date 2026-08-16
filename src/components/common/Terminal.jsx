@@ -234,7 +234,7 @@ function Terminal() {
 
         setTimeout(() => {
           window.open(
-            "https://github.com/",
+            "https://github.com/toky-todinirina",
             "_blank",
             "noopener,noreferrer"
           );
@@ -263,9 +263,9 @@ function Terminal() {
 
       default:
         addOutput([
-          `command not found: ${command}`,
+          `commande non reconnue: ${command}`,
           "",
-          "Type 'help' to see available commands.",
+          "Tapez 'help'  pour voir les commandes disponibles par defauts.",
         ]);
     }
   };
