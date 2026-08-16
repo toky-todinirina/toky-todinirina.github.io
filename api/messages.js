@@ -86,6 +86,40 @@ export default async function handler(req, res) {
   `,
 });
 
+
+
+await resend.emails.send({
+  from: "Portfolio <onboarding@resend.dev>",
+  to: [process.env.CONTACT_NOTIFICATION_EMAIL],
+  subject: `Nouveau message — ${subject?.trim() || "Sans objet"}`,
+  html: `
+    <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+      <h2>📩 Nouveau message reçu</h2>
+
+      <p><strong>Nom :</strong> ${name.trim()}</p>
+
+      <p><strong>Email :</strong> ${email.trim()}</p>
+
+      <p><strong>Objet :</strong> ${
+        subject?.trim() || "Non précisé"
+      }</p>
+
+      <hr />
+
+      <p><strong>Message :</strong></p>
+
+      <p>${message.trim()}</p>
+
+      <hr />
+
+      <p>
+        Ce message a été envoyé depuis votre portfolio.
+      </p>
+    </div>
+  `,
+});
+
+
     return res.status(201).json({
       success: true,
       message: "Your message has been sent successfully.",
