@@ -14,9 +14,9 @@ const COMMANDS = [
   "github",
   "linkedin",
   "whoami",
-  "ask",
   "clear",
 ];
+
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
 
@@ -32,12 +32,17 @@ function Terminal() {
   const [isOpen, setIsOpen] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
   const [input, setInput] = useState("");
+
   const [history, setHistory] = useState([
     {
       type: "output",
       content: [
-        "Bienvenu sur mon Portfolio interactif !",
-        "Tapez 'help' pour les commandes par defauts ou 'ask <question>' pour poser une question à l'assistant AI.",
+        "Bienvenue sur mon portfolio interactif !",
+        "",
+        "Vous pouvez directement poser votre question.",
+        "Exemple : « Quels sont tes projets ? »",
+        "",
+        "Tapez 'help' pour voir les commandes disponibles.",
       ],
     },
   ]);
@@ -64,18 +69,28 @@ function Terminal() {
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message,
+        }),
       });
+
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "La requets a été rejetée");
+        throw new Error(
+          data.error || "La requête a été rejetée."
+        );
       }
 
       addOutput(data.answer.split("\n"));
     } catch (error) {
-      addOutput(["Erreur de l'Assistant du Terminal:", error.message]);
+      addOutput([
+        "Erreur de l'Assistant du Terminal :",
+        error.message,
+      ]);
     } finally {
       setIsThinking(false);
     }
@@ -83,153 +98,223 @@ function Terminal() {
 
   const executeCommand = (rawCommand) => {
     const trimmedCommand = rawCommand.trim();
+
+    if (!trimmedCommand) return;
+
     const command = trimmedCommand.toLowerCase();
 
-    if (!command) return;
-
-    setHistory((prev) => [
-      ...prev,
-      {
-        type: "command",
-        content: command,
-      },
-    ]);
-
     setCommandHistory((prev) => {
-      const updated = [...prev, command];
+      const updated = [...prev, trimmedCommand];
       return updated.slice(-50);
     });
 
     setHistoryIndex(-1);
 
-    if (command.startsWith("ask")) {
-      const question = trimmedCommand.slice(4).trim();
-
-      if (!question) {
-        addOutput(["Usage: ask <Votre question>"]);
-        return;
-      }
-
-      addOutput(["Le Terminal est en train de réfléchir à votre question..."]);
-      askAI(question);
-      return;
-    }
-
     switch (command) {
       case "help":
-        addOutput([
-          "Commandes disponibles:",
-          "  ask <question> : Discuter avec l'assistant AI du portfolio",
-          "",
-          "  about       → About me",
-          "  skills      → Technical skills",
-          "  services    → My services",
-          "  projects    → My projects",
-          "  experience  → My experience",
-          "  contact     → Contact me",
-          "  resume      → Open my resume",
-          "  github      → Open GitHub",
-          "  linkedin    → Open LinkedIn",
-          "  whoami      → Who is Toky?",
-          "  clear       → Clear terminal",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: [
+              "Commandes disponibles :",
+              "",
+              "  help        → Afficher cette aide",
+              "  about       → À propos de Toky",
+              "  skills      → Compétences techniques",
+              "  services    → Services proposés",
+              "  projects    → Projets réalisés",
+              "  experience  → Expérience professionnelle",
+              "  contact     → Informations de contact",
+              "  resume      → Ouvrir le CV",
+              "  github      → Ouvrir GitHub",
+              "  linkedin    → Ouvrir LinkedIn",
+              "  whoami      → Présentation de Toky",
+              "  clear       → Effacer le terminal",
+              "",
+              "Vous pouvez également poser directement une question.",
+              "Exemple : Quels sont tes projets ?",
+            ],
+          },
         ]);
-        break;
-
-      case "ask: ":
-        addOutput(["Usage: ask <Votre question>"]);
-        break;
+        return;
 
       case "about":
-        addOutput([
-          "Navigation vers à propos...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Navigation vers la section À propos..."],
+          },
         ]);
 
         setTimeout(() => {
           scrollToSection("about");
         }, 150);
 
-        break;
+        return;
 
       case "skills":
-        addOutput([
-          "Lecture des compétences ...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Lecture des compétences..."],
+          },
         ]);
 
         setTimeout(() => {
           scrollToSection("competences");
         }, 150);
 
-        break;
+        return;
 
       case "services":
-        addOutput([
-          "Lecture des services...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Lecture des services..."],
+          },
         ]);
 
         setTimeout(() => {
           scrollToSection("services");
         }, 150);
 
-        break;
+        return;
 
       case "projects":
-        addOutput([
-          "Lecture des projets...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Lecture des projets..."],
+          },
         ]);
 
         setTimeout(() => {
           scrollToSection("projects");
         }, 150);
 
-        break;
+        return;
 
       case "experience":
-        addOutput([
-          "Lecture de l'expérience...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Lecture de l'expérience..."],
+          },
         ]);
 
         setTimeout(() => {
           scrollToSection("experience");
         }, 150);
 
-        break;
+        return;
 
       case "contact":
-        addOutput([
-          "Navigation vers la section de contact...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: [
+              "Navigation vers la section de contact...",
+            ],
+          },
         ]);
 
         setTimeout(() => {
           scrollToSection("contact");
         }, 150);
 
-        break;
+        return;
 
       case "whoami":
-        addOutput([
-          "Toky Todinirina",
-          "",
-          "Front-End Developer",
-          "Research Assistant",
-          "",
-          "Interested in technology, research, design and digital experiences.",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: [
+              "Toky Todinirina",
+              "",
+              "Front-End Developer",
+              "Research Assistant",
+              "",
+              "Interested in technology, research, design and digital experiences.",
+            ],
+          },
         ]);
-        break;
+
+        return;
 
       case "resume":
-        addOutput([
-          "Ouverture du CV...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Ouverture du CV..."],
+          },
         ]);
 
         setTimeout(() => {
-          window.open("assets\\resume.pdf", "_blank");
+          window.open(
+            "/assets/resume.pdf",
+            "_blank",
+            "noopener,noreferrer"
+          );
         }, 300);
 
-        break;
+        return;
 
       case "github":
-        addOutput([
-          "Ouverture de GitHub...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Ouverture de GitHub..."],
+          },
         ]);
 
         setTimeout(() => {
@@ -240,40 +325,59 @@ function Terminal() {
           );
         }, 300);
 
-        break;
+        return;
 
       case "linkedin":
-        addOutput([
-          "Opening LinkedIn...",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
+          {
+            type: "output",
+            content: ["Ouverture de LinkedIn..."],
+          },
         ]);
 
         setTimeout(() => {
           window.open(
-            "https://www.linkedin.com/",
+            "https://www.linkedin.com/in/toky-todinirina",
             "_blank",
             "noopener,noreferrer"
           );
         }, 300);
 
-        break;
+        return;
 
       case "clear":
         setHistory([]);
-        break;
+        return;
 
       default:
-        addOutput([
-          `commande non reconnue: ${command}`,
-          "",
-          "Tapez 'help'  pour voir les commandes disponibles par defauts.",
+        setHistory((prev) => [
+          ...prev,
+          {
+            type: "command",
+            content: trimmedCommand,
+          },
         ]);
+
+        askAI(trimmedCommand);
+        return;
     }
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    executeCommand(input);
+    if (isThinking) return;
+
+    const value = input.trim();
+
+    if (!value) return;
+
+    executeCommand(value);
     setInput("");
   };
 
@@ -290,12 +394,16 @@ function Terminal() {
 
       setHistoryIndex(newIndex);
       setInput(commandHistory[newIndex]);
+
+      return;
     }
 
     if (event.key === "ArrowDown") {
       event.preventDefault();
 
-      if (!commandHistory.length || historyIndex === -1) return;
+      if (!commandHistory.length || historyIndex === -1) {
+        return;
+      }
 
       const newIndex = historyIndex + 1;
 
@@ -307,12 +415,16 @@ function Terminal() {
 
       setHistoryIndex(newIndex);
       setInput(commandHistory[newIndex]);
+
+      return;
     }
 
     if (event.key === "Tab") {
       event.preventDefault();
 
       const value = input.toLowerCase();
+
+      if (!value) return;
 
       const matches = COMMANDS.filter((command) =>
         command.startsWith(value)
@@ -329,20 +441,28 @@ function Terminal() {
       terminalBodyRef.current.scrollTop =
         terminalBodyRef.current.scrollHeight;
     }
-  }, [history]);
+  }, [history, isThinking]);
 
   useEffect(() => {
-    inputRef.current?.focus();
+    if (isOpen) {
+      inputRef.current?.focus();
+    }
   }, [isOpen]);
 
   useEffect(() => {
     const closeOnEscape = (event) => {
-      if (event.key === "Escape") setIsOpen(false);
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
     };
 
-    if (isOpen) window.addEventListener("keydown", closeOnEscape);
+    if (isOpen) {
+      window.addEventListener("keydown", closeOnEscape);
+    }
 
-    return () => window.removeEventListener("keydown", closeOnEscape);
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+    };
   }, [isOpen]);
 
   const focusTerminal = () => {
@@ -366,106 +486,130 @@ function Terminal() {
       )}
 
       {isOpen && (
-    <section
-      id="portfolio-terminal"
-      className="terminal-section"
-      aria-label="Terminal interactif"
-    >
-      <div className="terminal-container">
-        <div className="terminal-window" onClick={focusTerminal}>
-          <div className="terminal-header">
-            <div className="terminal-controls">
-              <span className="terminal-control terminal-control--red" />
-              <span className="terminal-control terminal-control--yellow" />
-              <span className="terminal-control terminal-control--green" />
-            </div>
-
-            <div className="terminal-title">
-              toky@portfolio:~
-            </div>
-
-            <button
-              className="terminal-close"
-              type="button"
-              onClick={(event) => {
-                event.stopPropagation();
-                setIsOpen(false);
-              }}
-              aria-label="Fermer le terminal"
+        <section
+          id="portfolio-terminal"
+          className="terminal-section"
+          aria-label="Terminal interactif"
+        >
+          <div className="terminal-container">
+            <div
+              className="terminal-window"
+              onClick={focusTerminal}
             >
-              <FaTimes aria-hidden="true" />
-            </button>
-          </div>
-
-          <div
-            className="terminal-body"
-            ref={terminalBodyRef}
-          >
-            {history.map((item, index) => {
-              if (item.type === "command") {
-                return (
-                  <div
-                    className="terminal-line terminal-command"
-                    key={index}
-                  >
-                    <span className="terminal-prompt">
-                      toky@portfolio:~$
-                    </span>
-
-                    <span>{item.content}</span>
-                  </div>
-                );
-              }
-
-              return (
-                <div
-                  className="terminal-output"
-                  key={index}
-                >
-                  {item.content.map((line, lineIndex) => (
-                    <div key={lineIndex}>
-                      {line || "\u00A0"}
-                    </div>
-                  ))}
+              <div className="terminal-header">
+                <div className="terminal-controls">
+                  <span className="terminal-control terminal-control--red" />
+                  <span className="terminal-control terminal-control--yellow" />
+                  <span className="terminal-control terminal-control--green" />
                 </div>
-              );
-            })}
 
-            <form
-              className="terminal-input-line"
-              onSubmit={handleSubmit}
-            >
-              <span className="terminal-prompt">
-                toky@portfolio:~$
-              </span>
+                <div className="terminal-title">
+                  toky@portfolio:~
+                </div>
 
-              <input
-                ref={inputRef}
-                type="text"
-                value={input}
-                onChange={(event) =>
-                  setInput(event.target.value)
-                }
-                onKeyDown={handleKeyDown}
-                disabled={isThinking}
-                autoComplete="off"
-                spellCheck="false"
-                aria-label="Terminal command"
-                aria-busy={isThinking}
-              />
+                <button
+                  className="terminal-close"
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setIsOpen(false);
+                  }}
+                  aria-label="Fermer le terminal"
+                >
+                  <FaTimes aria-hidden="true" />
+                </button>
+              </div>
 
-              <span className="terminal-cursor" />
-            </form>
+              <div
+                className="terminal-body"
+                ref={terminalBodyRef}
+              >
+                {history.map((item, index) => {
+                  if (item.type === "command") {
+                    return (
+                      <div
+                        className="terminal-line terminal-command"
+                        key={index}
+                      >
+                        <span className="terminal-prompt">
+                          toky@portfolio:~$
+                        </span>
+
+                        <span>{item.content}</span>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div
+                      className="terminal-output"
+                      key={index}
+                    >
+                      {item.content.map(
+                        (line, lineIndex) => (
+                          <div key={lineIndex}>
+                            {line || "\u00A0"}
+                          </div>
+                        )
+                      )}
+                    </div>
+                  );
+                })}
+
+                {isThinking && (
+                  <div className="terminal-output terminal-thinking">
+                    <span>AI réfléchit</span>
+
+                    <span className="terminal-thinking-dots">
+                      <span>.</span>
+                      <span>.</span>
+                      <span>.</span>
+                    </span>
+                  </div>
+                )}
+
+                <form
+                  className="terminal-input-line"
+                  onSubmit={handleSubmit}
+                >
+                  <span className="terminal-prompt">
+                    toky@portfolio:~$
+                  </span>
+
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={input}
+                    onChange={(event) =>
+                      setInput(event.target.value)
+                    }
+                    onKeyDown={handleKeyDown}
+                    disabled={isThinking}
+                    autoComplete="off"
+                    spellCheck="false"
+                    placeholder={
+                      isThinking
+                        ? "Assistant en train de réfléchir..."
+                        : "Écrivez votre question..."
+                    }
+                    aria-label="Écrivez votre question"
+                    aria-busy={isThinking}
+                  />
+
+                  <span className="terminal-cursor" />
+                </form>
+              </div>
+            </div>
+
+            <p className="terminal-hint">
+              Tapez <strong>help</strong> pour voir les
+              commandes disponibles.
+            </p>
           </div>
-        </div>
-
-        <p className="terminal-hint">
-          Type <strong>help</strong> to explore the portfolio.
-        </p>
-      </div>
-    </section>
+        </section>
       )}
     </>
   );
 }
+
 export default Terminal;
