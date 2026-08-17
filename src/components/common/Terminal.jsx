@@ -504,7 +504,7 @@ function Terminal() {
                 </div>
 
                 <div className="terminal-title">
-                  toky@portfolio:~
+                  Bot Assistant
                 </div>
 
                 <button
@@ -532,7 +532,7 @@ function Terminal() {
                         key={index}
                       >
                         <span className="terminal-prompt">
-                          toky@portfolio:~$
+                          Mr Bot
                         </span>
 
                         <span>{item.content}</span>
@@ -558,7 +558,7 @@ function Terminal() {
 
                 {isThinking && (
                   <div className="terminal-output terminal-thinking">
-                    <span>AI réfléchit</span>
+                    <span>Mr Bot réfléchit</span>
 
                     <span className="terminal-thinking-dots">
                       <span>.</span>
@@ -573,7 +573,7 @@ function Terminal() {
                   onSubmit={handleSubmit}
                 >
                   <span className="terminal-prompt">
-                    toky@portfolio:~$
+                    Prompt:~$
                   </span>
 
                   <input
