@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FaTerminal, FaTimes } from "react-icons/fa";
+import { FaRobot, FaTimes } from "react-icons/fa";
 import "../../styles/components/terminal.scss";
 
 const COMMANDS = [
@@ -480,8 +480,8 @@ function Terminal() {
           aria-expanded="false"
           aria-controls="portfolio-terminal"
         >
-          <FaTerminal aria-hidden="true" />
-          <span>Terminal</span>
+          <FaRobot aria-hidden="true" />
+          <span>Bot</span>
         </button>
       )}
 
