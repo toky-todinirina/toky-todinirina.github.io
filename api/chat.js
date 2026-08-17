@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  if (!process.env.GROQ_API_KEY) {
+  if (!process.env.OPENROUTER_KEY) {
     return res
       .status(500)
       .json({ error: "Server AI configuration is missing" });
@@ -26,10 +26,10 @@ export default async function handler(req, res) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENROUTER_KEY}`,
         },
         body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
+          model: process.env.OPENROUTER_MODEL || "openrouter/free",
           messages: [
             {
               role: "system",
