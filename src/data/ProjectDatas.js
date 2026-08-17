@@ -12,7 +12,7 @@ export const projects = [
     link: "https://toky-todinirina.vercel.app",
     date: "2026",
     category: "Personnel",
-    github: "https://github.com/toky-todinirina/toky-todinirina.github.io"
+    // github: "https://github.com/toky-todinirina/toky-todinirina.github.io"
   },
   {
     id: 2,

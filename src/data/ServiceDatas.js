@@ -10,7 +10,7 @@ export const servicesData = [
       "Landing page : 300 000 – 600 000 Ar",
       "Site vitrine : 600 000 – 1 500 000 Ar",
       "Application React : 1 000 000 – 3 000 000+ Ar",
-      // "International : 15 – 25 €/h, puis 25 – 35 €/h",
+      
     ],
   },
   {

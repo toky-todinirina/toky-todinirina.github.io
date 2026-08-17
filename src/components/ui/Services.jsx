@@ -49,7 +49,7 @@ const Services = () => {
         })}
       </div>
       <p className="services__notice">
-        Chaque mission fait l'objet d'un devis adapté à son périmètre et à ses contraintes.
+        International : 15 – 25 €/h, puis 25 – 35 €/h et chaque mission fait l'objet d'un devis adapté à son périmètre et à ses contraintes.
       </p>
     </Section>
   );
