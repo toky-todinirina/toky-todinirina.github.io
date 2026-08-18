@@ -44,8 +44,8 @@ export default async function handler(req, res) {
     });
 
 
-    await resend.emails.send({
-  from: "ACUSE DE RECEPTION <onboarding@resend.dev>",
+await resend.emails.send({
+  from: "ACUSE DE RECEPTION <tokyangelo050@gmail.com>",
   to: [email.trim()],
   subject: "Merci pour votre message",
   html: `
