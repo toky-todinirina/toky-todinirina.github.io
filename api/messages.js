@@ -1,8 +1,6 @@
 import connectToDatabase from "./lib/mongodb.js";
 import Message from "./models/Message.js";
-import {Resend} from "resend"; 
-
-
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 export default async function handler(req, res) {
@@ -43,12 +41,11 @@ export default async function handler(req, res) {
       message: message.trim(),
     });
 
-
-await resend.emails.send({
-  from: "ACUSE DE RECEPTION <tokyangelo050@gmail.com>",
-  to: [email.trim()],
-  subject: "Merci pour votre message",
-  html: `
+    await resend.emails.send({
+      from: "ACUSE DE RECEPTION <onboarding@resend.dev>",
+      to: [email.trim()],
+      subject: "Merci pour votre message",
+      html: `
     <div style="font-family: Arial, sans-serif; line-height: 1.6;">
       <h2>Bonjour ${name.trim()},</h2>
 
@@ -84,15 +81,13 @@ await resend.emails.send({
       </p>
     </div>
   `,
-});
+    });
 
-
-
-await resend.emails.send({
-  from: "PORTFOLIO  <onboarding@resend.dev>",
-  to: [process.env.CONTACT_NOTIFICATION_EMAIL],
-  subject: `Nouveau message — ${subject?.trim() || "Sans objet"}`,
-  html: `
+    await resend.emails.send({
+      from: "PORTFOLIO  <onboarding@resend.dev>",
+      to: [process.env.CONTACT_NOTIFICATION_EMAIL],
+      subject: `Nouveau message — ${subject?.trim() || "Sans objet"}`,
+      html: `
     <div style="font-family: Arial, sans-serif; line-height: 1.6;">
       <h2>📩 Nouveau message reçu</h2>
 
@@ -100,9 +95,7 @@ await resend.emails.send({
 
       <p><strong>Email :</strong> ${email.trim()}</p>
 
-      <p><strong>Objet :</strong> ${
-        subject?.trim() || "Non précisé"
-      }</p>
+      <p><strong>Objet :</strong> ${subject?.trim() || "Non précisé"}</p>
 
       <hr />
 
@@ -117,8 +110,7 @@ await resend.emails.send({
       </p>
     </div>
   `,
-});
-
+    });
 
     return res.status(201).json({
       success: true,

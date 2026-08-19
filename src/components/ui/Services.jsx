@@ -15,7 +15,10 @@ const Services = () => {
       id="services"
       title="Ce que je fais"
       subtitle={
-        <>Mes services : développement <Highlights>Front-End</Highlights> et solutions <Highlights>données</Highlights> complètes</>
+        <>
+          Mes services : développement <Highlights>Front-End</Highlights> et
+          solutions <Highlights>données</Highlights> complètes
+        </>
       }
       align="center"
     >
@@ -43,13 +46,16 @@ const Services = () => {
                   ))}
                 </ul>
               </div>
-              <a href="#contact" className="services__cta">Demander un devis</a>
+              <a href="#contact" className="services__cta">
+                Demander un devis
+              </a>
             </motion.div>
           );
         })}
       </div>
       <p className="services__notice">
-        International : 15 – 25 €/h, puis 25 – 35 €/h et chaque mission fait l'objet d'un devis adapté à son périmètre et à ses contraintes.
+        International : 15 – 25 €/h, puis 25 – 35 €/h et chaque mission fait
+        l'objet d'un devis adapté à son périmètre et à ses contraintes.
       </p>
     </Section>
   );
