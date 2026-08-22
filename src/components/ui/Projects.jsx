@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <Section
       id="projects"
-      title="Projets"
+      title="Mes Projets Tech"
       subtitle={
         <>
           Une sélection de projets mettant en avant mon

@@ -10,6 +10,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { experiences } from "../../data/experiences";
 import "../../styles/pages/experienceStory.scss";
+import NotFound from "../NotFound";
 
 const ExperienceStory = () => {
   const { id } = useParams();
@@ -24,15 +25,7 @@ const ExperienceStory = () => {
     return (
       <main className="experience-story experience-story--not-found">
         <div className="experience-story__not-found">
-          <span>404</span>
-
-          <h1>Expérience introuvable</h1>
-
-          <p>
-            Cette expérience n'existe pas ou n'est plus
-            disponible.
-          </p>
-
+          <NotFound />
           <Link to="/#experience">
             <FiArrowLeft aria-hidden="true" />
             Retour aux expériences
@@ -79,9 +72,6 @@ const ExperienceStory = () => {
     );
   }
 
-  /*
-   * Navigation chronologique
-   */
   const previousExperience =
     experiences[experienceIndex + 1];
 
@@ -91,11 +81,6 @@ const ExperienceStory = () => {
   return (
     <main className="experience-story">
       <div className="experience-story__container">
-
-        {/* =====================================================
-            RETOUR
-        ====================================================== */}
-
         <Link
           className="experience-story__back"
           to="/#experience"
@@ -103,11 +88,6 @@ const ExperienceStory = () => {
           <FiArrowLeft aria-hidden="true" />
           Retour aux expériences
         </Link>
-
-        {/* =====================================================
-            HERO
-        ====================================================== */}
-
         <motion.header
           className="experience-story__hero"
           initial={{ opacity: 0, y: 25 }}
@@ -144,10 +124,7 @@ const ExperienceStory = () => {
           </div>
         </motion.header>
 
-        {/* =====================================================
-            TAGLINE
-        ====================================================== */}
-
+ {/* Tagline de l'expérience */}
         {story.tagline && (
           <motion.div
             className="experience-story__intro"
@@ -162,15 +139,9 @@ const ExperienceStory = () => {
           </motion.div>
         )}
 
-        {/* =====================================================
-            CONTENU STORY
-        ====================================================== */}
+        {/* CONTENU STORY */}
 
         <div className="experience-story__content">
-
-          {/* =================================================
-              01 — INTRODUCTION
-          ================================================== */}
 
           {story.introduction && (
             <motion.section
@@ -198,10 +169,6 @@ const ExperienceStory = () => {
             </motion.section>
           )}
 
-          {/* =================================================
-              02 — CONTEXTE
-          ================================================== */}
-
           {story.context && (
             <motion.section
               className="experience-story__section"
@@ -228,9 +195,6 @@ const ExperienceStory = () => {
             </motion.section>
           )}
 
-          {/* =================================================
-              03 — DÉFI
-          ================================================== */}
 
           {story.challenge && (
             <motion.section
@@ -257,11 +221,6 @@ const ExperienceStory = () => {
               </div>
             </motion.section>
           )}
-
-          {/* =================================================
-              04 — APPROCHE
-          ================================================== */}
-
           {story.approach && (
             <motion.section
               className="experience-story__section"
@@ -287,10 +246,6 @@ const ExperienceStory = () => {
               </div>
             </motion.section>
           )}
-
-          {/* =================================================
-              05 — RESPONSABILITÉS
-          ================================================== */}
 
           {story.responsibilities?.length > 0 && (
             <motion.section
@@ -334,11 +289,6 @@ const ExperienceStory = () => {
               </div>
             </motion.section>
           )}
-
-          {/* =================================================
-              06 — COMPÉTENCES DÉVELOPPÉES
-          ================================================== */}
-
           {story.skillsDeveloped?.length > 0 && (
             <motion.section
               className="experience-story__section"
@@ -369,9 +319,6 @@ const ExperienceStory = () => {
             </motion.section>
           )}
 
-          {/* =================================================
-              07 — APPRENTISSAGE
-          ================================================== */}
 
           {story.learning && (
             <motion.section
@@ -399,10 +346,6 @@ const ExperienceStory = () => {
             </motion.section>
           )}
 
-          {/* =================================================
-              08 — IMPACT
-          ================================================== */}
-
           {story.impact && (
             <motion.section
               className="experience-story__section"
@@ -429,10 +372,6 @@ const ExperienceStory = () => {
             </motion.section>
           )}
 
-          {/* =================================================
-              09 — CONCLUSION
-          ================================================== */}
-
           {story.conclusion && (
             <motion.section
               className="experience-story__section experience-story__section--conclusion"
@@ -458,10 +397,6 @@ const ExperienceStory = () => {
               </div>
             </motion.section>
           )}
-
-          {/* =================================================
-              10 — POINTS CLÉS
-          ================================================== */}
 
           {story.highlights?.length > 0 && (
             <motion.section
@@ -496,10 +431,6 @@ const ExperienceStory = () => {
           )}
 
         </div>
-
-        {/* =====================================================
-            NAVIGATION ENTRE EXPÉRIENCES
-        ====================================================== */}
 
         <nav
           className="experience-story__navigation"

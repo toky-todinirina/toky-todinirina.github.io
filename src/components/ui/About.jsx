@@ -5,16 +5,16 @@ import Avatar from "../../assets/images/photo.png";
 import Highlights from "../common/Hightlights";
 
 const aboutCards = [
-  { number: "Front-End", label: "Développement d'interfaces React & Vite" },
-  { number: "UX", label: "Expérience utilisateur & accessibilité" },
-  { number: "Data", label: "Saisie, transcription et organisation de données" },
+  { number: "#Data", label: "Collecte, Saisie, transcription et organisation de données" },
+  { number: "#UX", label: "Expérience utilisateur & accessibilité" },
+  { number: "#Front-End", label: "Développement d'interfaces React & Vite" },
 ];
 
 const About = () => (
   <Section
     id="about"
     title="Qui suis-je ?"
-    subtitle="Développeur Front-End • Spécialiste Data & Communication"
+    subtitle="Spécialiste Data, Communication et Développeur Front-End"
     align="left"
   >
     <div className="about">
@@ -37,18 +37,22 @@ const About = () => (
       >
         <div className="about__text">
           <p>
-            Je suis <Highlights>développeur Front-End</Highlights> React créant des interfaces modernes et accessibles.
-            Ma différenciation ? Une expertise unique combinant <Highlights>data</Highlights>, communication et terrain.
+            Je suis dans la{" "}
+            <Highlights>
+              Collecte, transcription et organisation de données
+            </Highlights>{" "}
+            – expertise acquise en mission auprès de projets de recherche et humanitaires à Madagascar.
           </p>
-
           <p>
-            <Highlights>Collecte, transcription et organisation de données</Highlights> – expertise acquise en mission auprès de
-            projets de recherche, complétant ma palette Front-End.
+            Je crée également des interfaces modernes et accessibles avec{" "}
+            <Highlights>React</Highlights>. Ma différenciation ? Une expertise
+            unique combinant <Highlights>data</Highlights>, communication et
+            Tech.
           </p>
-
           <p>
-            Avec React, Vite et SCSS, je conçois des solutions maintenables et évolutives,
-            véritablement adaptées à vos <Highlights>utilisateurs et enjeux métier</Highlights>.
+            Avec React, Vite et SCSS, je conçois des solutions maintenables et
+            évolutives, véritablement adaptées à vos{" "}
+            <Highlights>utilisateurs et enjeux métier</Highlights>.
           </p>
         </div>
 
@@ -59,7 +63,11 @@ const About = () => (
               key={card.label}
               initial={{ opacity: 0, y: 20, scale: 0.8 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.3 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.3,
+              }}
               viewport={{ once: true }}
             >
               <span className="stat__number">{card.number}</span>

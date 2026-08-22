@@ -105,10 +105,10 @@ const Contact = () => {
           </p>
 
           <div className="contact__missions" aria-label="Types de missions">
-            <span>Développement Front-End</span>
-            <span>Data Entry</span>
-            <span>Transcription</span>
             <span>Collecte de données sur terrain</span>
+            <span>Data Entry</span>
+             <span>Développement Front-End</span>
+            <span>Transcription</span>
           </div>
 
           <ul className="contact__list">

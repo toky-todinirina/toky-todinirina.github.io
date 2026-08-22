@@ -13,11 +13,11 @@ const Services = () => {
   return (
     <Section
       id="services"
-      title="Ce que je fais"
+      title="Ce que je fais pour vous"
       subtitle={
         <>
-          Mes services : développement <Highlights>Front-End</Highlights> et
-          solutions <Highlights>données</Highlights> complètes
+          Mes services : <Highlights>Collecte et saisie de données</Highlights>, Transcription et développement Front-End et
+          solutions données complètes
         </>
       }
       align="center"
@@ -54,8 +54,7 @@ const Services = () => {
         })}
       </div>
       <p className="services__notice">
-        International : 15 – 25 €/h, puis 25 – 35 €/h et chaque mission fait
-        l'objet d'un devis adapté à son périmètre et à ses contraintes.
+        Chaque mission fait l'objet d'un devis adapté à son périmètre et à ses contraintes.
       </p>
     </Section>
   );

@@ -45,25 +45,23 @@ export const experiences = [
       approach:
         "J'ai adopté une approche basée sur l'écoute, la neutralité et l'adaptation de la communication. Il était important de respecter les formulations prévues par le protocole, tout en créant un climat suffisamment rassurant pour permettre aux participants de répondre dans de bonnes conditions.",
 
-      responsibilities:
-        [
-          "Participer à la collecte des données sur le terrain.",
-          "Administrer les questionnaires via RedCap.",
-          "Respecter les procédures définies dans le protocole d'investigation.",
-          "Maintenir une posture neutre pendant les échanges.",
-          "Garantir la confidentialité des informations recueillies.",
-          "Veiller à l'objectivité des réponses enregistrées.",
-        ],
+      responsibilities: [
+        "Participer à la collecte des données sur le terrain.",
+        "Administrer les questionnaires via RedCap.",
+        "Respecter les procédures définies dans le protocole d'investigation.",
+        "Maintenir une posture neutre pendant les échanges.",
+        "Garantir la confidentialité des informations recueillies.",
+        "Veiller à l'objectivité des réponses enregistrées.",
+      ],
 
-      skillsDeveloped:
-        [
-          "Collecte de données numériques",
-          "Communication interpersonnelle",
-          "Communication adaptative",
-          "Respect d'un protocole de recherche",
-          "Gestion de données sensibles",
-          "Observation et écoute active",
-        ],
+      skillsDeveloped: [
+        "Collecte de données numériques",
+        "Communication interpersonnelle",
+        "Communication adaptative",
+        "Respect d'un protocole de recherche",
+        "Gestion de données sensibles",
+        "Observation et écoute active",
+      ],
 
       learning:
         "Cette expérience m'a appris que la collecte de données ne repose pas uniquement sur un outil comme RedCap. La qualité des informations recueillies dépend également de la relation établie avec les participants, de la compréhension du contexte et de la capacité de l'enquêteur à rester neutre.",
@@ -699,7 +697,7 @@ Type : ${experience.type}
 Période : ${experience.period}
 Responsabilités :
 ${experience.responsibilities.map((responsibility) => `- ${responsibility}`).join("\n")}
-Compétences associées : ${experience.skills.join(", ")}`
+Compétences associées : ${experience.skills.join(", ")}`,
     )
     .join("\n\n");
 

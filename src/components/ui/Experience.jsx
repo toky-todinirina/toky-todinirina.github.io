@@ -37,7 +37,7 @@ const getReferenceLink = (reference) => {
 const Experience = () => (
   <Section
     id="experience"
-    title="Expériences"
+    title="Expériences Terrain"
     subtitle="Un parcours de terrain entre recherche, supervision et gestion de données"
   >
     <div className="experience-timeline">
@@ -54,19 +54,13 @@ const Experience = () => (
           }}
         >
           {(() => {
-            const referenceLink = getReferenceLink(
-              experience.reference
-            );
+            const referenceLink = getReferenceLink(experience.reference);
 
-            const ReferenceIcon =
-              referenceLink?.icon || FiMail;
+            const ReferenceIcon = referenceLink?.icon || FiMail;
 
             return (
               <>
-                <span
-                  className="experience-card__marker"
-                  aria-hidden="true"
-                />
+                <span className="experience-card__marker" aria-hidden="true" />
 
                 <header className="experience-card__header">
                   <div>
@@ -83,9 +77,7 @@ const Experience = () => (
                         >
                           {experience.organization}
 
-                          <FiExternalLink
-                            aria-hidden="true"
-                          />
+                          <FiExternalLink aria-hidden="true" />
                         </a>
                       ) : (
                         experience.organization
@@ -110,13 +102,9 @@ const Experience = () => (
                   </h4>
 
                   <ul>
-                    {experience.responsibilities.map(
-                      (responsibility) => (
-                        <li key={responsibility}>
-                          {responsibility}
-                        </li>
-                      )
-                    )}
+                    {experience.responsibilities.map((responsibility) => (
+                      <li key={responsibility}>{responsibility}</li>
+                    ))}
                   </ul>
                 </div>
 
@@ -149,14 +137,13 @@ const Experience = () => (
                       Référence à venir
                     </button>
                   )}
-                                    <Link
+                  <Link
                     className="experience-card__story"
                     to={`/experiences/${experience.id}`}
                   >
                     <FiBookOpen aria-hidden="true" />
                     <span>Story</span>
                   </Link>
-
                 </div>
               </>
             );
