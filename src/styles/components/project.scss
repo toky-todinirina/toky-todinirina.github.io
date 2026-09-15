@@ -116,19 +116,25 @@
 
 .project__tags {
   width: 100%;
-  // margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
   list-style: none;
   li {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 9px;
-    background-color: rgba(vars.$accent-color, 0.5);
-    color: vars.$text-on-primary;
-    font-weight: 600;
+    flex: 1 1 0;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.75rem;
+    background: rgba(vars.$primary-color, 0.12);
+    border: 1px solid rgba(vars.$primary-color, 0.3);
+    border-radius: 5px;
+    color: vars.$text-secondary;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    box-sizing: border-box;
   }
 }
 .project__actions {
