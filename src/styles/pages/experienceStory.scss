@@ -114,6 +114,42 @@
   }
 }
 
+.experience-story__illustration {
+  display: grid;
+  min-height: 260px;
+  margin: 2rem 0 0;
+  overflow: hidden;
+  border: 1px dashed rgba(vars.$text-on-primary, 0.2);
+  border-radius: 16px;
+  background: rgba(vars.$text-on-primary, 0.025);
+  place-items: center;
+
+  img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: vars.$text-secondary;
+    font-size: 0.85rem;
+
+    svg {
+      color: vars.$secondary-color;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.experience-story__illustration--filled {
+  border-style: solid;
+  border-color: rgba(vars.$text-on-primary, 0.1);
+}
+
 .experience-story__intro {
   max-width: 720px;
 

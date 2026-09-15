@@ -30,6 +30,8 @@ export const experiences = [
     // ==========================================================
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Sur le terrain, la qualité d'une donnée commence par la qualité de la communication.",
 
@@ -110,6 +112,8 @@ export const experiences = [
     ],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Transformer une information brute en donnée exploitable exige autant de précision que de méthode.",
 
@@ -191,6 +195,8 @@ export const experiences = [
     ],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Une enquête efficace commence par une communication adaptée au terrain.",
 
@@ -262,6 +268,8 @@ export const experiences = [
     skills: ["Saisie de données", "Rigueur éditoriale"],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "La précision devient une compétence lorsque chaque donnée compte.",
 
@@ -338,6 +346,8 @@ export const experiences = [
     ],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Première immersion dans une mission structurée de collecte et d'évaluation de données.",
 
@@ -414,6 +424,8 @@ export const experiences = [
     ],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Une première expérience de terrain qui a rapproché la recherche de la réalité humaine.",
 
@@ -490,6 +502,8 @@ export const experiences = [
     ],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Superviser une équipe sur le terrain, c'est coordonner des personnes tout en restant connecté aux réalités des communautés.",
 
@@ -562,6 +576,8 @@ export const experiences = [
     skills: ["Communication écrite", "Google Sheets", "Rédaction de rapports"],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Écrire sur le numérique, c'est aussi réfléchir à la manière dont il transforme les relations humaines.",
 
@@ -637,6 +653,8 @@ export const experiences = [
     ],
 
     story: {
+      illustration:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
       tagline:
         "Dans un contexte d'urgence, l'organisation et la coordination deviennent essentielles.",
 

@@ -35,9 +35,14 @@ export default async function handler(req, res) {
       storedStory = storedStory.toObject();
     }
 
+    const story = {
+      ...(experience.story || {}),
+      ...(storedStory.story || {}),
+    };
+
     return res.status(200).json({
       experienceId: storedStory.experienceId,
-      story: storedStory.story,
+      story,
     });
   } catch (error) {
     console.error("Experience story API error:", error);

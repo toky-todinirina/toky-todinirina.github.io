@@ -103,7 +103,6 @@ const Contact = () => {
             Je peux vous accompagner sur des missions concrètes, rapides et
             utiles :
           </p>
-
           <div className="contact__missions" aria-label="Types de missions">
             <span>Collecte de données sur terrain</span>
             <span>Data Entry</span>
@@ -116,12 +115,10 @@ const Contact = () => {
               <FiMail />
               <span>tokyangelo050@gmail.com</span>
             </li>
-
             <li>
               <FiPhone />
               <span>+261 34 38 754 35</span>
             </li>
-
             <li>
               <FiMapPin />
               <span>Madagascar</span>
@@ -144,7 +141,6 @@ const Contact = () => {
                 required
               />
             </div>
-
             <div className="form-group">
               <input
                 type="email"
@@ -155,7 +151,6 @@ const Contact = () => {
                 required
               />
             </div>
-
             <div className="form-group">
               <input
                 type="text"

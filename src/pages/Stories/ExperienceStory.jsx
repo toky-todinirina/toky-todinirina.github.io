@@ -6,6 +6,7 @@ import {
   FiMapPin,
   FiBriefcase,
   FiCheckCircle,
+  FiImage,
 } from "react-icons/fi";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
@@ -163,10 +164,10 @@ const ExperienceStory = () => {
   }
 
   const previousExperience =
-    experiences[experienceIndex + 1];
+    experiences[experienceIndex - 1];
 
   const nextExperience =
-    experiences[experienceIndex - 1];
+    experiences[experienceIndex + 1];
 
   return (
     <main className="experience-story">
@@ -216,6 +217,27 @@ const ExperienceStory = () => {
             </span>
           </div>
         </motion.header>
+
+        <motion.figure
+          className={`experience-story__illustration${
+            story.illustration ? " experience-story__illustration--filled" : ""
+          }`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+        >
+          {story.illustration ? (
+            <img
+              src={story.illustration}
+              alt={`Illustration de ${experience.position}`}
+            />
+          ) : (
+            <figcaption>
+              <FiImage aria-hidden="true" />
+              <span>Illustration de l'expérience</span>
+            </figcaption>
+          )}
+        </motion.figure>
 
  {/* Tagline de l'expérience */}
         {story.tagline && (
@@ -534,9 +556,7 @@ const ExperienceStory = () => {
               to={`/experiences/${previousExperience.id}`}
               className="experience-story__nav experience-story__nav--previous"
             >
-              <span>
-                Expérience suivante dans le temps
-              </span>
+              <span>Expérience précédente</span>
 
               <strong>
                 {previousExperience.position}
@@ -555,7 +575,7 @@ const ExperienceStory = () => {
               to={`/experiences/${nextExperience.id}`}
               className="experience-story__nav experience-story__nav--next"
             >
-              <span>Expérience précédente</span>
+              <span>Expérience suivante dans le temps</span>
 
               <strong>
                 {nextExperience.position}
