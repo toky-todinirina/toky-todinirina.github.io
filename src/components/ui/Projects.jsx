@@ -1,36 +1,64 @@
-import Section from "../common/Section";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import Section from "../common/Section";
 import "../../styles/components/project.scss";
 import { projects } from "../../data/ProjectDatas.js";
-import Highlights from "../common/Hightlights"
+import { graphicWorks } from "../../data/GraphicDatas.js";
+import Highlights from "../common/Hightlights";
 import {
   cardVariants,
   containerVariants
 } from "../../animation/CardVariants";
 
 const Projects = () => {
+  const [filter, setFilter] = useState("all");
+  const portfolioItems = [
+    ...projects.map((project) => ({ ...project, type: "web" })),
+    ...graphicWorks.map((work) => ({ ...work, type: "graphic" })),
+  ];
+  const visibleItems = portfolioItems.filter(
+    (item) => filter === "all" || item.type === filter
+  );
+
   return (
     <Section
       id="projects"
-      title="Mes Projets Tech"
+      title="Mon Portfolio"
       subtitle={
         <>
-          Une sélection de projets mettant en avant mon
-          <Highlights>savoir-faire</Highlights> technique
+          Une sélection de projets web et de créations graphiques qui mettent
+          en avant mon <Highlights>savoir-faire</Highlights>.
         </>
       }
     >
+      <div className="portfolio__filters" role="group" aria-label="Filtrer le portfolio">
+        {[
+          ["all", "Tout"],
+          ["web", "Web"],
+          ["graphic", "Graphic design"],
+        ].map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            className={`portfolio__filter${filter === value ? " is-active" : ""}`}
+            onClick={() => setFilter(value)}
+            aria-pressed={filter === value}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
       <motion.div
         className="projects__grid"
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-80px" }}
+        animate="visible"
       >
-        {projects.map((project) => (
+        {visibleItems.map((project) => (
           <motion.div
-            key={project.id}
-            className="project__card"
+            key={`${project.type}-${project.id}`}
+            className={`project__card project__card--${project.type}`}
             variants={cardVariants}
           >
             <motion.div
@@ -44,6 +72,9 @@ const Projects = () => {
               }}
             >
               <div className="project__badge">
+                <span className="project__category">
+                  {project.type === "graphic" ? "Graphic design" : "Web"}
+                </span>
                 <span className="project__category">{project.category}</span>
                 <span className="project__date">{project.date}</span>
               </div>
@@ -62,29 +93,31 @@ const Projects = () => {
                   ))}
                 </ul>
 
-                <div className="project__actions">
-                  {project.github !== "#" && (
-                    <a
-                      href={project.github}
-                      className="project__link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="Voir le code"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                  {project.link !== "#" && (
-                    <a
-                      href={project.link}
-                      className="project__link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Voir le projet
-                    </a>
-                  )}
-                </div>
+                {project.type === "web" && (
+                  <div className="project__actions">
+                    {project.github && project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        className="project__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Voir le code"
+                      >
+                        GitHub
+                      </a>
+                    )}
+                    {project.link && project.link !== "#" && (
+                      <a
+                        href={project.link}
+                        className="project__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Voir le projet
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>

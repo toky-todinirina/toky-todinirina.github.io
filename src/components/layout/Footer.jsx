@@ -13,6 +13,16 @@ import {
   FiArrowUp,
 } from "react-icons/fi";
 const Footer = () => {
+  const ScrollToTop= () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
   return (
     <LazyMotion features={domAnimation}>
       <m.footer
@@ -59,7 +69,8 @@ const Footer = () => {
           {/* SCROLL TOP */}
           <button
             className="footer__scrolltop"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            type="button"
+            onClick={ScrollToTop}
             aria-label="Retour en haut"
           >
             <FiArrowUp />

@@ -1,5 +1,5 @@
 import Project from "../assets/images/avatar.png";
-import Portfolio from "../assets/images/avatarpng.png";
+import Portfolio from "../assets/images/portfolio.png";
 import Portfolio2 from "../assets/images/dashboard.png"
 import Portfolio3 from "../assets/images/e-commerce.png";
 export const projects = [
@@ -9,7 +9,7 @@ export const projects = [
     description: "Portfolio personnel moderne avec animations et design responsive.",
     image: Portfolio,
     tags: ["React", "SCSS", "Framer Motion"],
-    link: "https://toky-todinirina.vercel.app",
+    link: "#",
     date: "2026",
     category: "Personnel",
     // github: "https://github.com/toky-todinirina/toky-todinirina.github.io"

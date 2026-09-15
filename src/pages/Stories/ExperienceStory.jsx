@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiArrowLeft,
@@ -6,7 +7,7 @@ import {
   FiBriefcase,
   FiCheckCircle,
 } from "react-icons/fi";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { experiences } from "../../data/experiences";
 import "../../styles/pages/experienceStory.scss";
@@ -14,6 +15,10 @@ import NotFound from "../NotFound";
 
 const ExperienceStory = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const [story, setStory] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const experienceIndex = experiences.findIndex(
     (experience) => experience.id === id
@@ -21,12 +26,70 @@ const ExperienceStory = () => {
 
   const experience = experiences[experienceIndex];
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [id]);
+
+  useEffect(() => {
+    if (!id || !experience) {
+      setIsLoading(false);
+      return;
+    }
+
+    let isMounted = true;
+
+    setIsLoading(true);
+    setError(false);
+    setStory(null);
+
+    const loadStory = async () => {
+      try {
+        const response = await fetch(
+          `/api/experiences?id=${encodeURIComponent(id)}`
+        );
+
+        if (!response.ok) {
+          throw new Error("Unable to load story");
+        }
+
+        const data = await response.json();
+
+        if (isMounted) {
+          setStory(data.story || experience.story || null);
+        }
+      } catch {
+        if (isMounted) {
+          setStory(experience.story || null);
+          setError(!experience.story);
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadStory();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [id, experience]);
+
+  const goToExperience = () => {
+    navigate("/", {
+      state: {
+        scrollTo: `experience-${id}`,
+      },
+    });
+  };
+
   if (!experience) {
     return (
       <main className="experience-story experience-story--not-found">
         <div className="experience-story__not-found">
           <NotFound />
-          <Link to="/#experience">
+          <Link to="/" onClick={goToExperience}>
             <FiArrowLeft aria-hidden="true" />
             Retour aux expériences
           </Link>
@@ -35,11 +98,37 @@ const ExperienceStory = () => {
     );
   }
 
-  /*
-   * Récupération du contenu Story associé
-   * directement depuis experiences.js
-   */
-  const story = experience.story;
+  if (isLoading) {
+    return (
+      <main className="experience-story experience-story--not-found">
+        <div className="experience-story__not-found">
+          <p>Chargement de la story...</p>
+        </div>
+      </main>
+    );
+  }
+
+  if (error) {
+    return (
+      <main className="experience-story">
+        <div className="experience-story__container">
+          <button
+            className="experience-story__back"
+            type="button"
+            onClick={goToExperience}
+          >
+            <FiArrowLeft aria-hidden="true" />
+            Retour aux expériences
+          </button>
+
+          <div className="experience-story__not-found">
+            <h1>Story indisponible</h1>
+            <p>Impossible de charger cette story depuis la base de données.</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   /*
    * Sécurité :
@@ -51,13 +140,14 @@ const ExperienceStory = () => {
     return (
       <main className="experience-story">
         <div className="experience-story__container">
-          <Link
+          <button
             className="experience-story__back"
-            to="/#experience"
+            type="button"
+            onClick={goToExperience}
           >
             <FiArrowLeft aria-hidden="true" />
             Retour aux expériences
-          </Link>
+          </button>
 
           <div className="experience-story__not-found">
             <h1>Story bientôt disponible</h1>
@@ -83,7 +173,10 @@ const ExperienceStory = () => {
       <div className="experience-story__container">
         <Link
           className="experience-story__back"
-          to="/#experience"
+          to="/"
+          state={{
+            scrollTo: `experience-${id}`,
+          }}
         >
           <FiArrowLeft aria-hidden="true" />
           Retour aux expériences

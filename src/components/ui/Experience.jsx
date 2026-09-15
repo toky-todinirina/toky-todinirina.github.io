@@ -44,6 +44,7 @@ const Experience = () => (
       {experiences.map((experience, index) => (
         <motion.article
           className="experience-card"
+          id={`experience-${experience.id}`}
           key={experience.id}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,5 +1,33 @@
 @use "../utils/variables" as vars;
 
+.portfolio__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio__filter {
+  border: 1px solid rgba(vars.$primary-color, 0.35);
+  border-radius: 999px;
+  padding: 0.65rem 1.1rem;
+  background: transparent;
+  color: vars.$text-secondary;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &.is-active {
+    background: vars.$accent-color;
+    border-color: vars.$accent-color;
+    color: vars.$text-on-primary;
+    transform: translateY(-2px);
+  }
+}
+
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -132,5 +160,11 @@
 
   &:hover::after {
     transform: scaleX(1);
+  }
+}
+
+.project__card--graphic {
+  .project__image {
+    height: 220px;
   }
 }

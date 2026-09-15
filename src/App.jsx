@@ -1,5 +1,11 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 
 import "./styles/main.scss";
 
@@ -17,7 +23,26 @@ import Preloader from "./components/common/Preloader";
 import ExperienceStory from "./pages/Stories/ExperienceStory";
 
 function Portfolio() {
-  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const targetExperience = location.state?.scrollTo;
+  const [isLoading, setIsLoading] = useState(!targetExperience);
+
+  useEffect(() => {
+    if (!targetExperience || isLoading) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      document.getElementById(targetExperience)?.scrollIntoView({
+        behavior: "auto",
+        block: "start",
+      });
+
+      // L'etat de retour est a usage unique : un rafraichissement doit relancer le preloader.
+      navigate("/", { replace: true, state: null });
+    });
+  }, [isLoading, navigate, targetExperience]);
 
   return (
     <>
