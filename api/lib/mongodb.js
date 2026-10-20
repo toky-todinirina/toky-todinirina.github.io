@@ -14,24 +14,20 @@ if (!cached) {
     promise: null,
   };
 }
-
 export default async function connectToDatabase() {
   if (cached.conn) {
     return cached.conn;
   }
-
   if (!cached.promise) {
     cached.promise = mongoose
       .connect(MONGODB_URI)
       .then((mongooseInstance) => mongooseInstance);
   }
-
   try {
     cached.conn = await cached.promise;
   } catch (error) {
     cached.promise = null;
     throw error;
   }
-
   return cached.conn;
 }

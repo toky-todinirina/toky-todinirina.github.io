@@ -11,7 +11,7 @@ import {
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { experiences } from "../../data/experiences";
-import "../../styles/pages/experienceStory.scss";
+import "../../styles/pages/experienceStory.scss"
 import NotFound from "../NotFound";
 
 const ExperienceStory = () => {
@@ -121,22 +121,15 @@ const ExperienceStory = () => {
             <FiArrowLeft aria-hidden="true" />
             Retour aux expériences
           </button>
-
           <div className="experience-story__not-found">
-            <h1>Story indisponible</h1>
-            <p>Impossible de charger cette story depuis la base de données.</p>
+            <NotFound />
           </div>
         </div>
       </main>
     );
   }
 
-  /*
-   * Sécurité :
-   * si une expérience n'a pas encore de story,
-   * on affiche un message plutôt que de provoquer
-   * une erreur JavaScript.
-   */
+
   if (!story) {
     return (
       <main className="experience-story">
